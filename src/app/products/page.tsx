@@ -27,7 +27,6 @@ export default async function ProductsPage() {
     <section className="flex mx-auto bg-theme-container">
       <div className="container mx-auto py-5">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {/* items */}
           {products.map((product: Product) => (
             <>
               <div className="bg-white rounded-2xl flex items-center justify-center">
@@ -78,21 +77,6 @@ export default async function ProductsPage() {
               </div>
             </>
           ))}
-
-          {/* 
-          {products.map((product: Product) => (
-        <li
-          key={product.id}
-          className="p-4 bg-white shadow-md rounded-lg text-gray-700"
-        >
-          <h2 className="text-xl font-semibold">{product.title}</h2>
-          <p>{product.description}</p>
-          <p className="text-lg font-medium">${product.price}</p>
-          <p>{details.title}</p>
-        </li>
-      ))} 
-       */}
-          {/* end items */}
         </div>
       </div>
     </section>
