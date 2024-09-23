@@ -1,4 +1,9 @@
 import Image from "next/image";
+// --- Font awesome Icons --- //
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// -- Solid icons
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
 
 const ProductsPage = () => {
   return (
@@ -23,11 +28,11 @@ const ProductsPage = () => {
               </p>
               <p className="font-bold">9,999</p>
               <div>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                 <span>5.0</span>
               </div>
               <a
@@ -36,8 +41,9 @@ const ProductsPage = () => {
               >
                 เรียนรู้เพิ่มเติม
               </a>
-              <a href="#" title="" className="py-4">
-                <i className="fa-solid fa-location-dot"></i> สถานที่จัดจำหน่าย
+              <a href="#" title="" className="py-4 text-theme-color">
+                <FontAwesomeIcon icon={faLocationDot} className="pe-1" />
+                <span>สถานที่จัดจำหน่าย</span>
               </a>
             </div>
           </div>
@@ -60,11 +66,11 @@ const ProductsPage = () => {
               </p>
               <p className="font-bold">9,999</p>
               <div>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                 <span>5.0</span>
               </div>
               <a
@@ -73,8 +79,9 @@ const ProductsPage = () => {
               >
                 เรียนรู้เพิ่มเติม
               </a>
-              <a href="#" title="" className="py-4">
-                <i className="fa-solid fa-location-dot"></i> สถานที่จัดจำหน่าย
+              <a href="#" title="" className="py-4 text-theme-color">
+                <FontAwesomeIcon icon={faLocationDot} className="pe-1" />
+                <span>สถานที่จัดจำหน่าย</span>
               </a>
             </div>
           </div>
@@ -97,11 +104,11 @@ const ProductsPage = () => {
               </p>
               <p className="font-bold">9,999</p>
               <div>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                 <span>5.0</span>
               </div>
               <a
@@ -110,8 +117,9 @@ const ProductsPage = () => {
               >
                 เรียนรู้เพิ่มเติม
               </a>
-              <a href="#" title="" className="py-4">
-                <i className="fa-solid fa-location-dot"></i> สถานที่จัดจำหน่าย
+              <a href="#" title="" className="py-4 text-theme-color">
+                <FontAwesomeIcon icon={faLocationDot} className="pe-1" />
+                <span>สถานที่จัดจำหน่าย</span>
               </a>
             </div>
           </div>
@@ -134,11 +142,11 @@ const ProductsPage = () => {
               </p>
               <p className="font-bold">9,999</p>
               <div>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                 <span>5.0</span>
               </div>
               <a
@@ -147,8 +155,9 @@ const ProductsPage = () => {
               >
                 เรียนรู้เพิ่มเติม
               </a>
-              <a href="#" title="" className="py-4">
-                <i className="fa-solid fa-location-dot"></i> สถานที่จัดจำหน่าย
+              <a href="#" title="" className="py-4 text-theme-color">
+                <FontAwesomeIcon icon={faLocationDot} className="pe-1" />
+                <span>สถานที่จัดจำหน่าย</span>
               </a>
             </div>
           </div>
@@ -171,11 +180,11 @@ const ProductsPage = () => {
               </p>
               <p className="font-bold">9,999</p>
               <div>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                 <span>5.0</span>
               </div>
               <a
@@ -184,8 +193,9 @@ const ProductsPage = () => {
               >
                 เรียนรู้เพิ่มเติม
               </a>
-              <a href="#" title="" className="py-4">
-                <i className="fa-solid fa-location-dot"></i> สถานที่จัดจำหน่าย
+              <a href="#" title="" className="py-4 text-theme-color">
+                <FontAwesomeIcon icon={faLocationDot} className="pe-1" />
+                <span>สถานที่จัดจำหน่าย</span>
               </a>
             </div>
           </div>
@@ -208,11 +218,11 @@ const ProductsPage = () => {
               </p>
               <p className="font-bold">9,999</p>
               <div>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
-                <i className="fa-solid fa-star text-yellow-300"></i>
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
+                <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                 <span>5.0</span>
               </div>
               <a
@@ -221,8 +231,9 @@ const ProductsPage = () => {
               >
                 เรียนรู้เพิ่มเติม
               </a>
-              <a href="#" title="" className="py-4">
-                <i className="fa-solid fa-location-dot"></i> สถานที่จัดจำหน่าย
+              <a href="#" title="" className="py-4 text-theme-color">
+                <FontAwesomeIcon icon={faLocationDot} className="pe-1" />
+                <span>สถานที่จัดจำหน่าย</span>
               </a>
             </div>
           </div>

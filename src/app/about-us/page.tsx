@@ -1,4 +1,10 @@
 import Image from "next/image";
+// --- Font awesome Icons --- //
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// -- Solid icons
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const AboutusPage = () => {
   return (
@@ -55,14 +61,17 @@ const AboutusPage = () => {
             </h1>
             <h3 className="font-bold text-theme-color">สำนักงานใหญ่</h3>
             <p>
-              <i className="fa-solid fa-location-dot"></i> บริษัท สวิทซเฟลคซ
-              จำกัด เลขที่ 30/119 หมู่ 1 ต.โคกขาม อ.เมือง จ.สมุทรสาคร 74000
+              <FontAwesomeIcon icon={faLocationDot} className="pe-1" /> บริษัท
+              สวิทซเฟลคซ จำกัด เลขที่ 30/119 หมู่ 1 ต.โคกขาม อ.เมือง จ.สมุทรสาคร
+              74000
             </p>
             <p>
-              <i className="fa-solid fa-clock"></i> 1277
+              <FontAwesomeIcon icon={faClock} className="pe-1" />
+              1277
             </p>
             <p>
-              <i className="fa-solid fa-envelope"></i> sales@alectric.asia
+              <FontAwesomeIcon icon={faEnvelope} className="pe-1" />{" "}
+              sales@alectric.asia
             </p>
           </div>
         </div>

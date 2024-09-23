@@ -1,6 +1,9 @@
 import Image from "next/image";
 // --- Font awesome Icons --- //
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// -- Solid icons
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 // -- Brand icons
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faLine } from "@fortawesome/free-brands-svg-icons";
@@ -21,13 +24,14 @@ const Footer = () => {
           <div className="accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9">
             <div className="p-4 md:p-0">
               <p>
-                <i className="fa-solid fa-location-dot"></i>
+                <FontAwesomeIcon icon={faLocationDot} className="pe-2" />
                 บริษัท สวิทซเฟลคซ จำกัด เลขที่ 30/119 หมู่ 1 ต.โคกขาม อ.เมือง
                 จ.สมุทรสาคร 74000
               </p>
               <div className="pt-6">
                 <p>
-                  <i className="fa-solid fa-clock"></i> จันทร์ - เสาร์
+                  <FontAwesomeIcon icon={faClock} className="pe-1" /> จันทร์ -
+                  เสาร์
                 </p>
                 <p>9:00 - 17:00,</p>
                 <p>ปิดทำการวันอาทิตย์</p>

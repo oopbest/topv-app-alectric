@@ -6,6 +6,7 @@ import {
   ABOUT_US_PATH,
   PRODUCTS_PATH,
   STORES_PATH,
+  WARRANTY_PATH,
 } from "../../const/route-paths.const";
 
 const Header = () => {
@@ -44,7 +45,10 @@ const Header = () => {
             >
               สินค้า
             </Link>
-            <Link href="#" className="hover:underline underline-offset-4">
+            <Link
+              href={WARRANTY_PATH}
+              className="hover:underline underline-offset-4"
+            >
               การรับประกัน
             </Link>
             <Link
