@@ -1,13 +1,17 @@
-import React from "react";
+import Image from "next/image";
 
-type Props = {};
-
-const AboutusPage = (props: Props) => {
+const AboutusPage = () => {
   return (
     <>
       <section className="flex mx-auto bg-theme-container">
         <div className="container mx-auto p-4">
-          <img src="images/about-us.png" alt="Switchflex" className="w-full" />
+          <Image
+            width={1240}
+            height={600}
+            src="/images/about-us.png"
+            alt="Switchflex"
+            className="w-full"
+          />
           <div className="border-b flex flex-col gap-5 py-5">
             <h1 className="text-theme-color font-bold text-2xl">
               บริษัท สวิทซเฟลคซ จำกัด

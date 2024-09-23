@@ -1,9 +1,6 @@
 import Image from "next/image";
-import React from "react";
 
-type Props = {};
-
-const ProductsPage = (props: Props) => {
+const ProductsPage = () => {
   return (
     <section className="flex mx-auto bg-theme-container">
       <div className="container mx-auto py-5">

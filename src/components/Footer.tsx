@@ -1,8 +1,6 @@
 import Image from "next/image";
 // --- Font awesome Icons --- //
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// -- Solid icons
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 // -- Brand icons
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faLine } from "@fortawesome/free-brands-svg-icons";
