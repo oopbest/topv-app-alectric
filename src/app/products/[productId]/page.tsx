@@ -163,34 +163,36 @@ export default function ProductDetailPage({ params }: Props) {
             </div>
             <div className="flex flex-col justify-center py-10 gap-4">
               <h3 className="font-bold">รูปภาพสินค้า</h3>
-              <Image
-                width={800}
-                height={800}
-                src="/images/cms-detail-01.jpg"
-                alt=""
-                className="w-full"
-              />
-              <Image
-                width={800}
-                height={800}
-                src="/images/cms-detail-02.jpg"
-                alt=""
-                className="w-full"
-              />
-              <Image
-                width={800}
-                height={800}
-                src="/images/cms-detail-03.jpg"
-                alt=""
-                className="w-full"
-              />
-              <Image
-                width={800}
-                height={800}
-                src="/images/cms-detail-04.jpg"
-                alt=""
-                className="w-full"
-              />
+              <div className="flex flex-col items-center gap-4">
+                <Image
+                  width={800}
+                  height={800}
+                  src="/images/cms-detail-01.jpg"
+                  alt=""
+                  className="max-w-full"
+                />
+                <Image
+                  width={800}
+                  height={800}
+                  src="/images/cms-detail-02.jpg"
+                  alt=""
+                  className="max-w-full"
+                />
+                <Image
+                  width={800}
+                  height={800}
+                  src="/images/cms-detail-03.jpg"
+                  alt=""
+                  className="max-w-full"
+                />
+                <Image
+                  width={800}
+                  height={800}
+                  src="/images/cms-detail-04.jpg"
+                  alt=""
+                  className="max-w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
