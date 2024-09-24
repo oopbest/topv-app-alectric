@@ -1,3 +1,4 @@
+import ProductImages from "@/components/products/ProductImages";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,17 +26,13 @@ export default function ProductDetailPage({ params }: Props) {
     <>
       <section className="flex mx-auto bg-theme-container py-4">
         <div className="container mx-auto bg-white p-4">
-          {/* Info */}
+          {/* Product Info */}
           <div className="flex flex-col gap-5 md:flex-row">
-            <div className="">
-              <Image
-                width={456}
-                height={456}
-                src="/images/img-carousel-01.jpg"
-                alt=""
-                className="w-full"
-              />
+            {/* Product Images */}
+            <div className="md:flex-shrink-0">
+              <ProductImages />
             </div>
+            {/* Product Short description */}
             <div className="flex flex-col gap-6">
               <h1 className="text-theme-color text-2xl font-bold">
                 Alectric Smart Pet Feeder เครื่องให้อาหารอัจฉริยะ
@@ -106,7 +103,7 @@ export default function ProductDetailPage({ params }: Props) {
           </div>
 
           {/* Detail */}
-          <div>
+          <div className="py-10">
             <h1 className="font-bold text-xl">รายละเอียด</h1>
             <div className="flex flex-col gap-4">
               <p>
