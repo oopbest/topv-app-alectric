@@ -54,7 +54,7 @@ export default async function ProductsPage() {
                   <span>{product.rating}</span>
                 </div>
                 <Link
-                  href="#"
+                  href={`products/${product.id}`}
                   className="bg-theme-color px-5 py-3 rounded text-white mx-3"
                 >
                   เรียนรู้เพิ่มเติม

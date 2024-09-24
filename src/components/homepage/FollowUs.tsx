@@ -9,6 +9,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 const FollowUs = () => {
   return (
@@ -28,36 +29,36 @@ const FollowUs = () => {
 
           {/* Social Media */}
           <div className="flex space-x-4">
-            <a
+            <Link
               href="#"
               className="text-white bg-theme-color rounded-full w-12 h-12 flex justify-center items-center hover:bg-opacity-85"
             >
               <FontAwesomeIcon icon={faFacebook} className="fa-2x" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-white bg-theme-color rounded-full w-12 h-12 flex justify-center items-center hover:bg-opacity-85"
             >
               <FontAwesomeIcon icon={faLine} className="fa-2x" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-white bg-theme-color rounded-full w-12 h-12 flex justify-center items-center hover:bg-opacity-85"
             >
               <FontAwesomeIcon icon={faYoutube} className="fa-2x" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-white bg-theme-color rounded-full w-12 h-12 flex justify-center items-center hover:bg-opacity-85"
             >
               <FontAwesomeIcon icon={faInstagram} className="fa-2x" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-white bg-theme-color rounded-full w-12 h-12 flex justify-center items-center hover:bg-opacity-85"
             >
               <FontAwesomeIcon icon={faTwitter} className="fa-2x" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -105,14 +106,14 @@ const FollowUs = () => {
                   alt="Switchflex"
                   className="object-contain"
                 />
-                <a
+                <Link
                   href="#"
                   className="border p-3 rounded-full w-3 h-3 flex justify-center items-center text-theme-color border-theme-color relative group transition"
                 >
                   <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
                     <FontAwesomeIcon icon={faChevronRight} />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ const Header = () => {
         <div className="px-4 lg:order-first lg:basis-1/6 lg:p-0">
           <Link href="/" title="">
             <Image
-              src="images/logo.svg"
+              src="/images/logo.svg"
               alt="Logo"
               className="w-3/4"
               width={20}

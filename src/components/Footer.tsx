@@ -64,31 +64,31 @@ const Footer = () => {
           <div className="accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9">
             <ul className="p-4 md:p-0">
               <li>
-                <a title="Facebook Page" href="#">
+                <Link title="Facebook Page" href="#">
                   <FontAwesomeIcon icon={faFacebook} className="pe-2" />{" "}
                   Facebook Page
-                </a>
+                </Link>
               </li>
               <li>
-                <a title="Line" href="#">
+                <Link title="Line" href="#">
                   <FontAwesomeIcon icon={faLine} className="pe-2" /> Line
-                </a>
+                </Link>
               </li>
               <li>
-                <a title="Youtube" href="#">
+                <Link title="Youtube" href="#">
                   <FontAwesomeIcon icon={faYoutube} className="pe-2" /> Youtube
-                </a>
+                </Link>
               </li>
               <li>
-                <a title="Instagram" href="#">
+                <Link title="Instagram" href="#">
                   <FontAwesomeIcon icon={faInstagram} className="pe-2" />{" "}
                   Instagram
-                </a>
+                </Link>
               </li>
               <li>
-                <a title="Twitter" href="#">
+                <Link title="Twitter" href="#">
                   <FontAwesomeIcon icon={faTwitter} className="pe-2" /> Twitter
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
