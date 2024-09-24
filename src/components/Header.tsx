@@ -15,7 +15,7 @@ const Header = () => {
       <section className="flex mx-auto container items-center">
         {/* Logo */}
         <div className="px-4 lg:order-first lg:basis-1/6 lg:p-0">
-          <a href="/" title="">
+          <Link href="/" title="">
             <Image
               src="images/logo.svg"
               alt="Logo"
@@ -23,7 +23,7 @@ const Header = () => {
               width={20}
               height={20}
             />
-          </a>
+          </Link>
         </div>
 
         {/* Menu */}
@@ -91,11 +91,11 @@ const Header = () => {
           className="flex flex-col text-3xl items-center gap-10 text-white px-5 py-10"
           aria-label="mobile"
         >
-          <a href="#">สินค้า</a>
-          <a href="#">การรับประกัน</a>
-          <a href="#">สั่งซื้อสินค้า</a>
-          <a href="#">เกี่ยวกับเรา</a>
-          <a href="#">ติดต่อเรา 1277</a>
+          <Link href="#">สินค้า</Link>
+          <Link href="#">การรับประกัน</Link>
+          <Link href="#">สั่งซื้อสินค้า</Link>
+          <Link href="#">เกี่ยวกับเรา</Link>
+          <Link href="#">ติดต่อเรา 1277</Link>
         </nav>
       </section>
     </header>

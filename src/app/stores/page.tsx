@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const StoresPage = () => {
   return (
@@ -15,7 +16,7 @@ const StoresPage = () => {
           <h1 className="text-theme-color text-2xl font-bold">ออนไลน์</h1>
           <p>พันธมิตรการขายออนไลน์</p>
           <div className="flex gap-3 justify-center px-4">
-            <a href="#" className="border w-1/2 sm:w-1/6">
+            <Link href="#" className="border w-1/2 sm:w-1/6">
               <Image
                 width={297}
                 height={155}
@@ -23,8 +24,8 @@ const StoresPage = () => {
                 className="w-full"
                 alt=""
               />
-            </a>
-            <a href="#" className="border w-1/2 md:w-1/6">
+            </Link>
+            <Link href="#" className="border w-1/2 md:w-1/6">
               <Image
                 width={297}
                 height={155}
@@ -32,8 +33,8 @@ const StoresPage = () => {
                 className="w-full"
                 alt=""
               />
-            </a>
-            <a href="#" className="border w-1/2 md:w-1/6">
+            </Link>
+            <Link href="#" className="border w-1/2 md:w-1/6">
               <Image
                 width={297}
                 height={155}
@@ -41,8 +42,8 @@ const StoresPage = () => {
                 className="w-full"
                 alt=""
               />
-            </a>
-            <a href="#" className="border w-1/2 md:w-1/6">
+            </Link>
+            <Link href="#" className="border w-1/2 md:w-1/6">
               <Image
                 width={297}
                 height={155}
@@ -50,7 +51,7 @@ const StoresPage = () => {
                 className="w-full"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <h1 className="text-theme-color text-2xl font-bold">หน้าร้าน</h1>
           <p>ค้นหา Retail Store ใกล้คุณ</p>

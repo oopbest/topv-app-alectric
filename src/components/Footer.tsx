@@ -10,6 +10,7 @@ import { faLine } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -108,7 +109,7 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <a href="#">Topvalue</a>
+                <Link href="#">Topvalue</Link>
               </li>
               <li className="flex">
                 <Image
@@ -118,7 +119,7 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <a href="#">Shopee</a>
+                <Link href="#">Shopee</Link>
               </li>
               <li className="flex">
                 <Image
@@ -128,7 +129,7 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <a href="#">Lazada</a>
+                <Link href="#">Lazada</Link>
               </li>
               <li className="flex">
                 <Image
@@ -138,7 +139,7 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <a href="#">JD Central</a>
+                <Link href="#">JD Central</Link>
               </li>
             </ul>
           </div>
@@ -155,8 +156,8 @@ const Footer = () => {
           height={40}
         />
         <p>&copy; Topvalue 2024</p>
-        <a href="#">เงื่อนไขการใช้งาน</a>
-        <a href="#">นโยบายส่วนบุคคล</a>
+        <Link href="#">เงื่อนไขการใช้งาน</Link>
+        <Link href="#">นโยบายส่วนบุคคล</Link>
       </div>
     </footer>
   );

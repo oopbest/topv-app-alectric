@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { getProducts } from "./getProducts";
+import Link from "next/link";
 
 // interface Product {
 //   id: number;
@@ -52,16 +53,16 @@ export default async function ProductsPage() {
                   <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                   <span>{product.rating}</span>
                 </div>
-                <a
+                <Link
                   href="#"
                   className="bg-theme-color px-5 py-3 rounded text-white mx-3"
                 >
                   เรียนรู้เพิ่มเติม
-                </a>
-                <a href="#" title="" className="py-4 text-theme-color">
+                </Link>
+                <Link href="#" title="" className="py-4 text-theme-color">
                   <FontAwesomeIcon icon={faLocationDot} className="pe-1" />
                   <span>สถานที่จัดจำหน่าย</span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
