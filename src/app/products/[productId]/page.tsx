@@ -130,7 +130,7 @@ export default function ProductDetailPage({ params }: Props) {
                 <h3 className="font-bold">คุณสมบัติ</h3>
                 <ul className="list-disc list-inside">
                   <li>
-                    เชื่อมต่อผ่านแอปพลิเคชัน "Switchflex" มีไมค์สื่อสาร และ
+                    เชื่อมต่อผ่านแอปพลิเคชัน Switchflex มีไมค์สื่อสาร และ
                     ฟังก์ชันบันทึกเสียง
                   </li>
                   <li>
