@@ -11,7 +11,7 @@ import {
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-10 bg-white px-4 py-2 border-b lg:py-0">
+    <header className="sticky top-0 z-10 bg-white px-4 py-2 border-b lg:py-0 shadow-lg">
       <section className="flex mx-auto container items-center">
         {/* Logo */}
         <div className="px-4 lg:order-first lg:basis-1/6 lg:p-0">
