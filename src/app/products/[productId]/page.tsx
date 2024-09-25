@@ -1,4 +1,5 @@
 import ProductImages from "@/components/products/ProductImages";
+import { formatThaiBaht } from "@/utils/fomatCurrency.util";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -46,7 +47,9 @@ export default function ProductDetailPage({ params }: Props) {
                 delectus enim reprehenderit quo dignissimos.
               </p>
               <div className="border-t border-b bg-theme-container">
-                <h1 className="text-4xl py-10 text-center">5,999</h1>
+                <h1 className="text-4xl py-10 text-center">
+                  {formatThaiBaht(5999)}
+                </h1>
               </div>
               <h3 className="font-bold">ตัวแทนจำหน่าย</h3>
               <div className="flex gap-3 justify-center">

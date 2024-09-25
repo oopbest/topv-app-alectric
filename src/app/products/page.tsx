@@ -6,6 +6,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { getProducts } from "./getProducts";
 import Link from "next/link";
+import { formatThaiBaht } from "@/utils/fomatCurrency.util";
 
 // interface Product {
 //   id: number;
@@ -44,7 +45,7 @@ export default async function ProductsPage() {
                   className="object-contain"
                 />
                 <p className="px-5 line-clamp-2">{product.name}</p>
-                <p className="font-bold">{product.price}</p>
+                <p className="font-bold">{formatThaiBaht(product.price)}</p>
                 <div>
                   <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}
                   <FontAwesomeIcon icon={faStar} className="text-yellow-300" />{" "}

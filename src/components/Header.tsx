@@ -3,11 +3,11 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Solid icons
 import {
-  ABOUT_US_PATH,
   PRODUCTS_PATH,
+  ABOUT_US_PATH,
   STORES_PATH,
   WARRANTY_PATH,
-} from "../../const/route-paths.const";
+} from "@/const/route-paths.const";
 
 const Header = () => {
   return (
