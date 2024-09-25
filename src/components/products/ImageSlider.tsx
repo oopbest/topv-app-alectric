@@ -40,7 +40,7 @@ const settings = {
 
 const ImageSlider = () => {
   return (
-    <div className="max-w-md mx-auto px-8">
+    <div className="max-w-xs mx-auto lg:px-8 md:max-w-md">
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index} className="px-2">
@@ -49,7 +49,7 @@ const ImageSlider = () => {
               alt={`Slide image ${index + 1}`}
               width={600}
               height={400}
-              className="object-cover w-full"
+              className="max-w-full"
             />
           </div>
         ))}

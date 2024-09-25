@@ -29,7 +29,7 @@ export default async function ProductsPage() {
   const products = await getProducts();
   return (
     <section className="flex mx-auto bg-theme-container">
-      <div className="container mx-auto py-5">
+      <div className="container mx-auto p-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {products.map((product) => (
             <div
