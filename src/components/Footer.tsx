@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 // --- Font awesome Icons --- //
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,18 +24,31 @@ import {
   STORE_SHOPEE_ROUTE_PATH,
   STORE_TOPVALUE_ROUTE_PATH,
 } from "@/const/route-paths.const";
+import { useState } from "react";
 
 const Footer = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   return (
     <footer className="bg-theme-color text-sm lg:text-base text-white px-4 py-6 lg:pt-10">
       <section className="accordion mx-auto container flex flex-col justify-center gap-5 md:flex-row">
         {/* Contact */}
         <div className="accordion-item sm:basis-1/3 lg:basis-1/2">
-          <h3 className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header">
+          <h3
+            className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header sm:pointer-events-none"
+            onClick={() => handleToggle(1)}
+          >
             <span>ติดต่อ</span>
             <span className="accordion-icon md:hidden">&#9660;</span>
           </h3>
-          <div className="accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9">
+          <div
+            className={`accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9 ${
+              activeIndex === 1 ? "open" : ""
+            }`}
+          >
             <div className="p-4 md:p-0">
               <p>
                 <FontAwesomeIcon icon={faLocationDot} className="pe-2" />
@@ -54,11 +69,18 @@ const Footer = () => {
 
         {/* Dealer */}
         <div className="accordion-item sm:basis-1/2 lg:basis-1/2">
-          <h3 className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header">
+          <h3
+            className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header sm:pointer-events-none"
+            onClick={() => handleToggle(2)}
+          >
             <span>ตัวแทนจำหน่าย</span>
             <span className="accordion-icon md:hidden">&#9660;</span>
           </h3>
-          <div className="accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9">
+          <div
+            className={`accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9} ${
+              activeIndex === 2 ? "open" : ""
+            }`}
+          >
             <p className="p-4 md:p-0">
               สนใจสั่งซื้อสินค้าเป็นจำนวนมาก หรือสมัครเป็นตัวแทนจำหน่ายได้ที่
               โทร. 1277 E-mail: Service@switchflex.com
@@ -68,11 +90,18 @@ const Footer = () => {
 
         {/* Social media */}
         <div className="accordion-item basis-1/4">
-          <h3 className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header">
+          <h3
+            className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header sm:pointer-events-none"
+            onClick={() => handleToggle(3)}
+          >
             <span>ติดตาม</span>
             <span className="accordion-icon md:hidden">&#9660;</span>
           </h3>
-          <div className="accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9">
+          <div
+            className={`accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9 ${
+              activeIndex === 3 ? "open" : ""
+            }`}
+          >
             <ul className="p-4 md:p-0">
               <li>
                 <a
@@ -81,8 +110,8 @@ const Footer = () => {
                   title="Facebook Page"
                   href={FOLLOW_FACEBOOK_ROUTE_PATH}
                 >
-                  <FontAwesomeIcon icon={faFacebook} className="pe-2" />{" "}
-                  Facebook Page
+                  <FontAwesomeIcon icon={faFacebook} className="pe-2" />
+                  <span>Facebook Page</span>
                 </a>
               </li>
               <li>
@@ -131,11 +160,18 @@ const Footer = () => {
         </div>
 
         <div className="accordion-item basis-1/4">
-          <h3 className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header">
+          <h3
+            className="pb-2 border-b md:border-0 md:pb-4 font-bold accordion-header sm:pointer-events-none"
+            onClick={() => handleToggle(4)}
+          >
             <span>สั่งซื้อ</span>
             <span className="accordion-icon md:hidden">&#9660;</span>
           </h3>
-          <div className="accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9">
+          <div
+            className={`accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9 ${
+              activeIndex === 4 ? "open" : ""
+            }`}
+          >
             <ul className="p-4 md:p-0">
               <li className="flex">
                 <Image
