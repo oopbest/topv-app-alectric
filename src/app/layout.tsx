@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 // ** Fix Font Awesome icons appear large initially and then resize to the correct size **
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Head from "next/head";
 config.autoAddCss = false;
 // ** ----- **
 
@@ -25,6 +24,9 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
   title: "Alectric",
   description: "Alectric",
+  icons: {
+    icon: "/favicon.ico", // Use the path to your favicon
+  },
 };
 
 export default function RootLayout({
@@ -37,9 +39,6 @@ export default function RootLayout({
       {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > */}
-      <Head>
-        <link rel="icon" href="./favicon.ico" />
-      </Head>
       <body className="font-sukhumvit">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
