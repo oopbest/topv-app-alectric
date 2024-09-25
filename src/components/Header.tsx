@@ -3,10 +3,10 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Solid icons
 import {
-  PRODUCTS_PATH,
-  ABOUT_US_PATH,
-  STORES_PATH,
-  WARRANTY_PATH,
+  PRODUCTS_ROUTE_PATH,
+  ABOUT_US_ROUTE_PATH,
+  STORES_ROUTE_PATH,
+  WARRANTY_ROUTE_PATH,
 } from "@/const/route-paths.const";
 
 const Header = () => {
@@ -40,25 +40,25 @@ const Header = () => {
               หน้าแรก
             </Link>
             <Link
-              href={PRODUCTS_PATH}
+              href={PRODUCTS_ROUTE_PATH}
               className="hover:underline underline-offset-4"
             >
               สินค้า
             </Link>
             <Link
-              href={WARRANTY_PATH}
+              href={WARRANTY_ROUTE_PATH}
               className="hover:underline underline-offset-4"
             >
               การรับประกัน
             </Link>
             <Link
-              href={STORES_PATH}
+              href={STORES_ROUTE_PATH}
               className="hover:underline underline-offset-4"
             >
               สั่งซื้อสินค้า
             </Link>
             <Link
-              href={ABOUT_US_PATH}
+              href={ABOUT_US_ROUTE_PATH}
               className="hover:underline underline-offset-4"
             >
               เกี่ยวกับเรา

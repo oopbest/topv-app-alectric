@@ -11,6 +11,17 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import {
+  FOLLOW_FACEBOOK_ROUTE_PATH,
+  FOLLOW_INSTAGRAM_ROUTE_PATH,
+  FOLLOW_LINE_ROUTE_PATH,
+  FOLLOW_TWITTER_ROUTE_PATH,
+  FOLLOW_YOUTUBE_ROUTE_PATH,
+  STORE_JD_ROUTE_PATH,
+  STORE_LAZADA_ROUTE_PATH,
+  STORE_SHOPEE_ROUTE_PATH,
+  STORE_TOPVALUE_ROUTE_PATH,
+} from "@/const/route-paths.const";
 
 const Footer = () => {
   return (
@@ -64,31 +75,56 @@ const Footer = () => {
           <div className="accordion-content max-h-0 opacity-0 md:max-h-none md:opacity-100 leading-9">
             <ul className="p-4 md:p-0">
               <li>
-                <Link title="Facebook Page" href="#">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Facebook Page"
+                  href={FOLLOW_FACEBOOK_ROUTE_PATH}
+                >
                   <FontAwesomeIcon icon={faFacebook} className="pe-2" />{" "}
                   Facebook Page
-                </Link>
+                </a>
               </li>
               <li>
-                <Link title="Line" href="#">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Line"
+                  href={FOLLOW_LINE_ROUTE_PATH}
+                >
                   <FontAwesomeIcon icon={faLine} className="pe-2" /> Line
-                </Link>
+                </a>
               </li>
               <li>
-                <Link title="Youtube" href="#">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Youtube"
+                  href={FOLLOW_YOUTUBE_ROUTE_PATH}
+                >
                   <FontAwesomeIcon icon={faYoutube} className="pe-2" /> Youtube
-                </Link>
+                </a>
               </li>
               <li>
-                <Link title="Instagram" href="#">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Instagram"
+                  href={FOLLOW_INSTAGRAM_ROUTE_PATH}
+                >
                   <FontAwesomeIcon icon={faInstagram} className="pe-2" />{" "}
                   Instagram
-                </Link>
+                </a>
               </li>
               <li>
-                <Link title="Twitter" href="#">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Twitter"
+                  href={FOLLOW_TWITTER_ROUTE_PATH}
+                >
                   <FontAwesomeIcon icon={faTwitter} className="pe-2" /> Twitter
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -109,7 +145,13 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <Link href="#">Topvalue</Link>
+                <a
+                  href={STORE_TOPVALUE_ROUTE_PATH}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Topvalue
+                </a>
               </li>
               <li className="flex">
                 <Image
@@ -119,7 +161,13 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <Link href="#">Shopee</Link>
+                <a
+                  href={STORE_SHOPEE_ROUTE_PATH}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Shopee
+                </a>
               </li>
               <li className="flex">
                 <Image
@@ -129,7 +177,13 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <Link href="#">Lazada</Link>
+                <a
+                  href={STORE_LAZADA_ROUTE_PATH}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Lazada
+                </a>
               </li>
               <li className="flex">
                 <Image
@@ -139,7 +193,13 @@ const Footer = () => {
                   width={40}
                   height={40}
                 />
-                <Link href="#">JD Central</Link>
+                <a
+                  href={STORE_JD_ROUTE_PATH}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  JD Central
+                </a>
               </li>
             </ul>
           </div>
