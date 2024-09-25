@@ -25,13 +25,14 @@ const settings = {
     {
       breakpoint: 1024, // For tablets and larger phones
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
       },
     },
     {
       breakpoint: 640, // For small mobile screens
       settings: {
-        slidesToShow: 3,
+        arrows: false,
+        slidesToShow: 4,
       },
     },
   ],

@@ -13,7 +13,7 @@ export default function Home() {
       </div>
       <BestSeller />
       {/* Full width Banner */}
-      <div className="full-width-banner">
+      <div className="full-width-banner mx-auto">
         <div>
           <Image
             width={1920}

@@ -28,13 +28,13 @@ export default function ProductDetailPage({ params }: Props) {
       <section className="flex mx-auto bg-theme-container py-4">
         <div className="container mx-auto bg-white p-4">
           {/* Product Info */}
-          <div className="flex flex-col gap-5 md:flex-row">
+          <div className="flex flex-col gap-4 lg:flex-row">
             {/* Product Images */}
-            <div className="md:flex-shrink-0">
+            <div className="flex-shrink-0">
               <ProductImages />
             </div>
             {/* Product Short description */}
-            <div className="flex flex-col gap-6">
+            <div className="">
               <h1 className="text-theme-color text-2xl font-bold">
                 Alectric Smart Pet Feeder เครื่องให้อาหารอัจฉริยะ
                 มีกล้องพร้อมไมค์ เชื่อมแอพได้ 5L รุ่น Smart PF1 - รับประกัน 3 ปี
