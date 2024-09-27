@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./header";
+import Footer from "./footer";
 
 type Theme = {
   colors: {

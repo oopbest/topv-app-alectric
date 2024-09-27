@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // -- Solid icons
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
-import { getProducts } from "./getProducts";
+import { getProducts } from "./get-products";
 import Link from "next/link";
-import { formatThaiBaht } from "@/utils/fomatCurrency.util";
+import { formatThaiBaht } from "@/utils/format-currency";
 
 // interface Product {
 //   id: number;

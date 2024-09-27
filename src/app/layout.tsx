@@ -11,7 +11,7 @@ import { Suspense } from "react";
 config.autoAddCss = false;
 // ** ----- **
 
-import Loading from "@/components/Loading";
+import Loading from "@/components/loading";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",

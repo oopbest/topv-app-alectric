@@ -1,5 +1,5 @@
 import ProductImages from "@/components/products/ProductImages";
-import { formatThaiBaht } from "@/utils/fomatCurrency.util";
+import { formatThaiBaht } from "@/utils/format-currency";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
