@@ -29,6 +29,7 @@ import { useState } from "react";
 const Footer = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  // handle
   const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const Standard = () => {
+  // custom logic
   return (
     <>
       <div className="bg-sky-100 px-4">
