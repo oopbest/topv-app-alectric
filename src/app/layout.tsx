@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "/styles/globals.css";
 import "/styles/custom.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 // ** Fix Font Awesome icons appear large initially and then resize to the correct size **
 import { config } from "@fortawesome/fontawesome-svg-core";
