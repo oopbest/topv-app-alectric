@@ -2,7 +2,7 @@ import Image from "next/image";
 import BestSeller from "@/components/homepage/best-seller";
 import FollowUs from "@/components/homepage/follow-us";
 import YouTubeEmbed from "@/components/youtube-embed";
-import Standard from "@/components/homepage/standard-xx";
+import Standard from "@/components/homepage/standard";
 
 export default function Home() {
   const video_id = "5_yygU9ecMQ?si=yAFYnNc7oisSlVUQ";
