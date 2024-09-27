@@ -3,7 +3,8 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Solid icons
 import { useState } from "react";
-import MainMenu from "./homepage/MainMenu";
+import MainMenu from "./menu/MainMenu";
+import MobileMenu from "./menu/MobileMenu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,10 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 bg-white px-4 py-2 border-b lg:py-0 shadow-lg">
+    <header
+      id="header"
+      className="sticky top-0 z-10 bg-white px-4 py-2 border-b lg:py-0 shadow-lg"
+    >
       <section className="flex mx-auto container items-center">
         {/* Logo */}
         <div className="px-4 lg:order-first lg:basis-1/6 lg:p-0">
@@ -61,19 +65,7 @@ const Header = () => {
       </section>
 
       {/* Mobile Menu */}
-      <section
-        id="mobile-menu"
-        className={`${
-          isOpen ? "" : "hidden"
-        } flex-col bg-theme-color fixed w-full text-white left-0 h-full origin-top animate-open-menu`}
-      >
-        <nav
-          className="flex flex-col text-3xl items-center gap-10 text-white px-5 py-10"
-          aria-label="mobile"
-        >
-          <MainMenu />
-        </nav>
-      </section>
+      <MobileMenu isOpen={isOpen} />
     </header>
   );
 };
