@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MainMenu from "./menu--xx";
+import MainMenu from "./menu";
 
 interface Props {
   isOpen: boolean;
