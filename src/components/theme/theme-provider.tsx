@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext } from "react";
+import Footer from "../footer";
 
 type Theme = {
   colors: {
@@ -21,6 +22,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <ThemeContext.Provider value={defaultTheme}>
       <main>{children}</main>
+      <Footer />
     </ThemeContext.Provider>
   );
 };
