@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Standard = () => {
+const HomeStandard = () => {
   // custom logic
   return (
     <>
@@ -57,4 +57,4 @@ const Standard = () => {
   );
 };
 
-export default Standard;
+export default HomeStandard;

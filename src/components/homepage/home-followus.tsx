@@ -11,7 +11,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
 
-const FollowUs = () => {
+const HomeFollowUs = () => {
   return (
     <>
       <div className="contact-us mx-auto container p-4">
@@ -123,4 +123,4 @@ const FollowUs = () => {
   );
 };
 
-export default FollowUs;
+export default HomeFollowUs;

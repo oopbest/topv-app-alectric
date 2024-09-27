@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const BestSeller = () => {
+const HomeBestSeller = () => {
   return (
     <>
       {/* Best Seller */}
@@ -56,4 +56,4 @@ const BestSeller = () => {
   );
 };
 
-export default BestSeller;
+export default HomeBestSeller;

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import BestSeller from "@/components/homepage/best-seller";
-import FollowUs from "@/components/homepage/follow-us";
+import BestSeller from "@/components/homepage/home-bestseller";
+import FollowUs from "@/components/homepage/home-followus";
 import YouTubeEmbed from "@/components/youtube-embed";
-import Standard from "@/components/homepage/standard";
+import Standard from "@/components/homepage/home-standard";
 
 export default function Home() {
   const video_id = "5_yygU9ecMQ?si=yAFYnNc7oisSlVUQ";
