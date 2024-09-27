@@ -3,7 +3,7 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import { PrevArrow, NextArrow } from "./CustomArrows";
+import { PrevArrow, NextArrow } from "./slick-arrow-custom";
 
 const images = [
   "/images/img-carousel-01.jpg",

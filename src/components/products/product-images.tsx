@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ImageSlider from "./ImageSlider";
+import ImageSlider from "./slick-slider-image";
 
 const ProductImages = () => {
   return (

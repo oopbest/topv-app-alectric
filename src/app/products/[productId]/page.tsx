@@ -1,4 +1,4 @@
-import ProductImages from "@/components/products/ProductImages";
+import ProductImages from "@/components/products/product-images";
 import { formatThaiBaht } from "@/utils/format-currency";
 import { Metadata } from "next";
 import Image from "next/image";
