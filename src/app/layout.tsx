@@ -43,9 +43,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > */}
       <body className="font-sukhumvit">
-        <ThemeProvider>
-          <Suspense fallback={<Loading />}>{children}</Suspense>
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
