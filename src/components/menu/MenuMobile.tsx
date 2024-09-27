@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MainMenu from "./MainMenu";
+import MainMenu from "./Menu";
 
 interface Props {
   isOpen: boolean;
@@ -34,7 +34,7 @@ const MobileMenu = ({ isOpen }: Props) => {
       id="mobile-menu"
       style={{ top: `${headerHeight}px` }}
       className={`${
-        isOpen ? "" : "hidden"
+        isOpen ? "flex" : "hidden"
       } flex-col bg-theme-color fixed w-full text-white left-0 h-full origin-top animate-open-menu`}
     >
       <nav

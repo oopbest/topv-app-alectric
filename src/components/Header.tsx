@@ -3,8 +3,8 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Solid icons
 import { useState } from "react";
-import MainMenu from "./menu/MainMenu";
-import MobileMenu from "./menu/MobileMenu";
+import MainMenu from "./menu/Menu";
+import MobileMenu from "./menu/MenuMobile";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
