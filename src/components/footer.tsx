@@ -24,14 +24,22 @@ import {
   STORE_SHOPEE_ROUTE_PATH,
   STORE_TOPVALUE_ROUTE_PATH,
 } from "@/const/route-paths.const";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const pathname = usePathname();
 
   const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  // Collapse the menu whenever the route changes
+  useEffect(() => {
+    setActiveIndex(null);
+  }, [pathname]);
+
   return (
     <footer className="bg-theme-color text-sm lg:text-base text-white px-4 py-6 lg:pt-10">
       <section className="accordion mx-auto container flex flex-col justify-center gap-5 md:flex-row">

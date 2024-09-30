@@ -5,13 +5,18 @@ import {
   WARRANTY_ROUTE_PATH,
 } from "@/const/route-paths.const";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const MainMenu = () => {
+  const pathname = usePathname();
+
   return (
     <>
-      <Link href="/" className="hover:underline underline-offset-4">
-        หน้าแรก
-      </Link>
+      {pathname !== "/" && (
+        <Link href="/" className="hover:underline underline-offset-4">
+          หน้าแรก
+        </Link>
+      )}
       <Link
         href={PRODUCTS_ROUTE_PATH}
         className="hover:underline underline-offset-4"
