@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Solid icons
 import { useEffect, useState } from "react";
 import MainMenu from "./menu/menu";
 import MobileMenu from "./menu/menu-mobile";
 import { usePathname } from "next/navigation";
+import ProductSearch from "./products/product-search";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +57,7 @@ const Header = () => {
 
         {/* Search */}
         <div className="sm:basis-10/12 lg:w-auto lg:basis-1/5">
-          <div className="flex justify-center border border-gray-300 rounded-lg overflow-hidden">
+          {/* <div className="flex justify-center border border-gray-300 rounded-lg overflow-hidden">
             <span className="flex items-center justify-center px-3 text-gray-500">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </span>
@@ -67,7 +66,8 @@ const Header = () => {
               placeholder="ค้นหาสินค้า..."
               className="flex-1 px-1 py-2 border-none outline-none focus:ring-0 text-sm"
             />
-          </div>
+          </div> */}
+          <ProductSearch />
         </div>
       </section>
 

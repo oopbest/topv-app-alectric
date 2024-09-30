@@ -12,11 +12,15 @@ const MainMenu = () => {
 
   return (
     <>
-      {pathname !== "/" && (
-        <Link href="/" className="hover:underline underline-offset-4">
-          หน้าแรก
-        </Link>
-      )}
+      <Link
+        href="/"
+        className={`hover:underline underline-offset-4 lg:block ${
+          pathname !== "/" && "hidden"
+        }`}
+      >
+        หน้าแรก
+      </Link>
+
       <Link
         href={PRODUCTS_ROUTE_PATH}
         className="hover:underline underline-offset-4"
