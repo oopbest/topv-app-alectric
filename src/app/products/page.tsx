@@ -44,7 +44,7 @@ export default async function ProductsPage() {
                     height={500}
                     src="https://picsum.photos/500/500"
                     alt={product.name}
-                    className="object-contain"
+                    className="object-contain rounded-t-2xl"
                   />
                   <p className="px-5 line-clamp-2">{product.name}</p>
                   <p className="font-bold">{formatThaiBaht(product.price)}</p>
