@@ -1,5 +1,4 @@
-// src/components/Search.tsx
-import React, { useState, ChangeEvent, useEffect } from "react";
+import React, { useState, useRef, useEffect, ChangeEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,16 +7,17 @@ interface User {
   name: string;
 }
 
-const ProductSearch: React.FC = () => {
+const Search: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // 2-second delay
+      await new Promise((resolve) => setTimeout(resolve, 10000)); // 10-second delay
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/users"
       );
@@ -32,6 +32,12 @@ const ProductSearch: React.FC = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus(); // Set focus on the input when the modal opens
+    }
+  }, [isOpen]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -76,12 +82,6 @@ const ProductSearch: React.FC = () => {
       className="relative w-full max-w-md mx-auto"
       onClick={handleOutsideClick}
     >
-      {/* <button
-        onClick={toggleModal}
-        className="bg-blue-500 text-white rounded px-4 py-2 mb-4 focus:outline-none"
-      >
-        Open Search
-      </button> */}
       <div className="flex justify-center border border-gray-300 rounded-lg overflow-hidden">
         <span className="flex items-center justify-center px-3 text-gray-500">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -90,6 +90,7 @@ const ProductSearch: React.FC = () => {
           onClick={toggleModal}
           type="text"
           placeholder="ค้นหาสินค้า..."
+          readOnly
           className="flex-1 px-1 py-2 border-none outline-none focus:ring-0 text-base focus:outline-none"
         />
       </div>
@@ -97,19 +98,20 @@ const ProductSearch: React.FC = () => {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="modal-content bg-white rounded-lg p-6 w-11/12 md:w-3/4 lg:w-2/3 max-w-3xl mx-auto relative">
-            <button
+            {/* <button
               onClick={toggleModal}
               className="absolute top-2 right-2 text-gray-500"
             >
-              {/* &times; */}
-            </button>
+              &times;
+            </button> */}
             <div className="relative">
               <input
                 type="text"
+                ref={inputRef}
                 value={searchTerm}
                 onChange={handleChange}
                 placeholder="Search..."
-                className="border border-gray-300 rounded pl-10 pr-10 py-2 w-full focus:outline-none focus:ring focus:ring-blue-500"
+                className="border border-gray-300 rounded pl-10 pr-10 py-2 w-full focus:outline-none"
               />
               <div className="absolute left-3 top-2.5">
                 <svg
@@ -194,4 +196,4 @@ const ProductSearch: React.FC = () => {
   );
 };
 
-export default ProductSearch;
+export default Search;
