@@ -153,7 +153,7 @@ const Search: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
           <div className="modal-content bg-transparent text-white rounded-lg p-6 w-11/12 md:w-3/4 lg:w-2/3 max-w-3xl mx-auto fixed top-1/4">
             {/* <button
               onClick={toggleModal}
@@ -167,7 +167,7 @@ const Search: React.FC = () => {
                 ref={inputRef}
                 value={searchTerm}
                 onChange={handleChange}
-                placeholder="alectric.asia"
+                placeholder="e.g. Smartwatch, Wireless, Laptops"
                 className="border border-gray-300 text-gray-400 rounded pl-10 pr-10 py-2 w-full focus:outline-none focus:ring focus:ring-blue-300"
               />
               <div className="absolute left-3 top-2.5">
@@ -239,7 +239,7 @@ const Search: React.FC = () => {
                       <li
                         key={product.id}
                         onClick={() => handleSuggestionClick("")}
-                        className="cursor-pointer p-2 hover:bg-gray-200 flex items-center space-x-4"
+                        className="cursor-pointer p-2 hover:bg-white hover:text-black flex items-center space-x-4"
                       >
                         <Image
                           width={50}
@@ -259,7 +259,7 @@ const Search: React.FC = () => {
                   </ul>
                 ) : (
                   searchTerm.length >= 3 && (
-                    <div className="mt-4 text-gray-500 flex flex-col text-center justify-center">
+                    <div className="mt-4 text-white flex flex-col text-center justify-center">
                       <p>ไม่พบผลการค้นหา</p>
                       <p>
                         ลองใช้คำอื่นที่แตกต่างหรือคำอื่นที่มีความหมายกว้างกว่านี้
