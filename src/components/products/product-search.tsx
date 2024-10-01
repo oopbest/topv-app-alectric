@@ -5,6 +5,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { formatThaiBaht } from "@/utils/format-currency";
 import allproducts from "@mockup/allproducts.json";
 import { Product } from "@/interfaces/dto/products.dto";
+import { useRouter } from "next/navigation";
 
 const Search: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -12,6 +13,7 @@ const Search: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   const fetchData = async () => {
     setIsLoading(true);
@@ -41,9 +43,10 @@ const Search: React.FC = () => {
     setSearchTerm(value);
   };
 
-  const handleSuggestionClick = (suggestion?: string) => {
-    setSearchTerm(suggestion ? suggestion : ""); // Clear the search term when an item is selected
+  const handleSuggestionClick = (product: Product) => {
+    setSearchTerm(""); // Clear the search term when an item is selected
     setIsOpen(false);
+    router.push(`/products/${product.id}`);
   };
 
   const toggleModal = () => {
@@ -178,7 +181,7 @@ const Search: React.FC = () => {
                     {filteredProducts.map((product) => (
                       <li
                         key={product.id}
-                        onClick={() => handleSuggestionClick("")}
+                        onClick={() => handleSuggestionClick(product)}
                         className="cursor-pointer p-2 hover:bg-white hover:text-black flex items-center space-x-4"
                       >
                         <Image
