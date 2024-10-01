@@ -42,7 +42,7 @@ export default async function ProductsPage() {
                   <Image
                     width={500}
                     height={500}
-                    src="https://picsum.photos/500/500"
+                    src={`https://picsum.photos/id/${product.id}/500/500`}
                     alt={product.name}
                     className="object-contain rounded-t-2xl"
                   />

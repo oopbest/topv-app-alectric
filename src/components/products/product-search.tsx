@@ -1,15 +1,18 @@
+import Image from "next/image";
 import React, { useState, useRef, useEffect, ChangeEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-interface User {
+interface Product {
   id: number;
   name: string;
+  image: string;
+  price: number;
 }
 
 const Search: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -17,12 +20,59 @@ const Search: React.FC = () => {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 10000)); // 10-second delay
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-      const data: User[] = await response.json();
-      setSuggestions(data.map((user) => user.name));
+      await new Promise((resolve) => setTimeout(resolve, 3000)); // 3-second delay
+      // Simulate fetching data from an API or static JSON file
+      const data: Product[] = [
+        {
+          id: 1,
+          name: "Smartphone",
+          image: "https://picsum.photos/id/1/500/500",
+          price: 299.99,
+        },
+        {
+          id: 2,
+          name: "Laptop",
+          image: "https://picsum.photos/id/2/500/500",
+          price: 999.99,
+        },
+        {
+          id: 3,
+          name: "Wireless Earbuds",
+          image: "https://picsum.photos/id/3/500/500",
+          price: 49.99,
+        },
+        {
+          id: 4,
+          name: "Smartwatch",
+          image: "https://picsum.photos/id/4/500/500",
+          price: 199.99,
+        },
+        {
+          id: 5,
+          name: "Bluetooth Speaker",
+          image: "https://picsum.photos/id/5/500/500",
+          price: 59.99,
+        },
+        {
+          id: 6,
+          name: "Smart test 1",
+          image: "https://picsum.photos/id/5/500/500",
+          price: 59.99,
+        },
+        {
+          id: 6,
+          name: "Smart test 2",
+          image: "https://picsum.photos/id/5/500/500",
+          price: 59.99,
+        },
+        {
+          id: 6,
+          name: "Smart test 3",
+          image: "https://picsum.photos/id/5/500/500",
+          price: 59.99,
+        },
+      ];
+      setProducts(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -44,8 +94,8 @@ const Search: React.FC = () => {
     setSearchTerm(value);
   };
 
-  const handleSuggestionClick = (suggestion: string) => {
-    setSearchTerm(suggestion);
+  const handleSuggestionClick = (suggestion?: string) => {
+    setSearchTerm(suggestion ? suggestion : ""); // Clear the search term when an item is selected
     setIsOpen(false);
   };
 
@@ -61,11 +111,11 @@ const Search: React.FC = () => {
     setSearchTerm("");
   };
 
-  // Filter suggestions only if searchTerm length is 3 or more
-  const filteredSuggestions =
+  // Filter products only if searchTerm length is 3 or more
+  const filteredProducts =
     searchTerm.length >= 3
-      ? suggestions.filter((item) =>
-          item.toLowerCase().includes(searchTerm.toLowerCase())
+      ? products.filter((product) =>
+          product.name.toLowerCase().includes(searchTerm.toLowerCase())
         )
       : [];
 
@@ -110,8 +160,8 @@ const Search: React.FC = () => {
                 ref={inputRef}
                 value={searchTerm}
                 onChange={handleChange}
-                placeholder="Search..."
-                className="border border-gray-300 rounded pl-10 pr-10 py-2 w-full focus:outline-none"
+                placeholder="Search for products..."
+                className="border border-gray-300 rounded pl-10 pr-10 py-2 w-full focus:outline-none focus:ring focus:ring-blue-500"
               />
               <div className="absolute left-3 top-2.5">
                 <svg
@@ -175,19 +225,39 @@ const Search: React.FC = () => {
                 </svg>
               </div>
             ) : (
-              filteredSuggestions.length > 0 && (
-                <ul className="mt-4 max-h-60 overflow-y-auto border border-gray-300 rounded-lg shadow-lg">
-                  {filteredSuggestions.map((suggestion, index) => (
-                    <li
-                      key={index}
-                      onClick={() => handleSuggestionClick(suggestion)}
-                      className="cursor-pointer p-2 hover:bg-gray-200"
-                    >
-                      {suggestion}
-                    </li>
-                  ))}
-                </ul>
-              )
+              <>
+                {filteredProducts.length > 0 ? (
+                  <ul className="mt-4 max-h-60 overflow-y-auto border border-gray-300 rounded-lg shadow-lg">
+                    {filteredProducts.map((product) => (
+                      <li
+                        key={product.id}
+                        onClick={() => handleSuggestionClick("")}
+                        className="cursor-pointer p-2 hover:bg-gray-200 flex items-center space-x-4"
+                      >
+                        <Image
+                          width={50}
+                          height={50}
+                          src={product.image}
+                          alt={product.name}
+                          className="h-12 w-12 object-cover max-w-full"
+                        />
+                        <div>
+                          <p className="font-medium">{product.name}</p>
+                          <p className="text-gray-500">
+                            ${product.price.toFixed(2)}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  searchTerm.length >= 3 && (
+                    <div className="mt-4 text-center text-gray-500">
+                      No results found
+                    </div>
+                  )
+                )}
+              </>
             )}
           </div>
         </div>
