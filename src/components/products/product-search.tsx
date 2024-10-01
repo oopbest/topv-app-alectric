@@ -3,13 +3,8 @@ import React, { useState, useRef, useEffect, ChangeEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { formatThaiBaht } from "@/utils/format-currency";
-
-interface Product {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-}
+import allproducts from "@mockup/allproducts.json";
+import { Product } from "@/interfaces/dto/products.dto";
 
 const Search: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -23,62 +18,7 @@ const Search: React.FC = () => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 3000)); // 3-second delay
       // Simulate fetching data from an API or static JSON file
-      const data: Product[] = [
-        {
-          id: 1,
-          name: "Smartphone",
-          image: "https://picsum.photos/id/1/500/500",
-          price: 299.99,
-        },
-        {
-          id: 2,
-          name: "Laptop",
-          image: "https://picsum.photos/id/2/500/500",
-          price: 999.99,
-        },
-        {
-          id: 3,
-          name: "Wireless Earbuds",
-          image: "https://picsum.photos/id/3/500/500",
-          price: 49.99,
-        },
-        {
-          id: 4,
-          name: "Smartwatch",
-          image: "https://picsum.photos/id/4/500/500",
-          price: 199.99,
-        },
-        {
-          id: 5,
-          name: "Bluetooth Speaker",
-          image: "https://picsum.photos/id/5/500/500",
-          price: 59.99,
-        },
-        {
-          id: 6,
-          name: "Smart test 1",
-          image: "https://picsum.photos/id/6/500/500",
-          price: 59.99,
-        },
-        {
-          id: 7,
-          name: "Smart test 2",
-          image: "https://picsum.photos/id/7/500/500",
-          price: 19.66,
-        },
-        {
-          id: 8,
-          name: "Smart test 3",
-          image: "https://picsum.photos/id/8/500/500",
-          price: 79.99,
-        },
-        {
-          id: 9,
-          name: "Smart test 4",
-          image: "https://picsum.photos/id/9/500/500",
-          price: 39.99,
-        },
-      ];
+      const data: Product[] = allproducts;
       setProducts(data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -167,7 +107,7 @@ const Search: React.FC = () => {
                 ref={inputRef}
                 value={searchTerm}
                 onChange={handleChange}
-                placeholder="e.g. Smartwatch, Wireless, Laptops"
+                placeholder="e.g. Wireless Bluetooth, Earbuds, Gaming"
                 className="border border-gray-300 text-gray-400 rounded pl-10 pr-10 py-2 w-full focus:outline-none focus:ring focus:ring-blue-300"
               />
               <div className="absolute left-3 top-2.5">

@@ -22,6 +22,8 @@
       "@/*": ["./src/*"],
       "@const/*": ["./src/const/*"],
       "@utils/*": ["./src/utils/*"],
+      "@mockup/*": ["./src/mockup/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
