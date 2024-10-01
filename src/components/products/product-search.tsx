@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState, useRef, useEffect, ChangeEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { formatThaiBaht } from "@/utils/format-currency";
 
 interface Product {
   id: number;
@@ -56,20 +57,26 @@ const Search: React.FC = () => {
         {
           id: 6,
           name: "Smart test 1",
-          image: "https://picsum.photos/id/5/500/500",
+          image: "https://picsum.photos/id/6/500/500",
           price: 59.99,
         },
         {
-          id: 6,
+          id: 7,
           name: "Smart test 2",
-          image: "https://picsum.photos/id/5/500/500",
-          price: 59.99,
+          image: "https://picsum.photos/id/7/500/500",
+          price: 19.66,
         },
         {
-          id: 6,
+          id: 8,
           name: "Smart test 3",
-          image: "https://picsum.photos/id/5/500/500",
-          price: 59.99,
+          image: "https://picsum.photos/id/8/500/500",
+          price: 79.99,
+        },
+        {
+          id: 9,
+          name: "Smart test 4",
+          image: "https://picsum.photos/id/9/500/500",
+          price: 39.99,
         },
       ];
       setProducts(data);
@@ -139,15 +146,15 @@ const Search: React.FC = () => {
         <input
           onClick={toggleModal}
           type="text"
-          placeholder="ค้นหาสินค้า..."
+          placeholder="ค้นหาผลิตภัณฑ์..."
           readOnly
           className="flex-1 px-1 py-2 border-none outline-none focus:ring-0 text-base focus:outline-none"
         />
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="modal-content bg-white rounded-lg p-6 w-11/12 md:w-3/4 lg:w-2/3 max-w-3xl mx-auto relative">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50">
+          <div className="modal-content bg-transparent text-white rounded-lg p-6 w-11/12 md:w-3/4 lg:w-2/3 max-w-3xl mx-auto fixed top-1/4">
             {/* <button
               onClick={toggleModal}
               className="absolute top-2 right-2 text-gray-500"
@@ -160,8 +167,8 @@ const Search: React.FC = () => {
                 ref={inputRef}
                 value={searchTerm}
                 onChange={handleChange}
-                placeholder="Search for products..."
-                className="border border-gray-300 rounded pl-10 pr-10 py-2 w-full focus:outline-none focus:ring focus:ring-blue-500"
+                placeholder="alectric.asia"
+                className="border border-gray-300 text-gray-400 rounded pl-10 pr-10 py-2 w-full focus:outline-none focus:ring focus:ring-blue-300"
               />
               <div className="absolute left-3 top-2.5">
                 <svg
@@ -243,8 +250,8 @@ const Search: React.FC = () => {
                         />
                         <div>
                           <p className="font-medium">{product.name}</p>
-                          <p className="text-gray-500">
-                            ${product.price.toFixed(2)}
+                          <p className="font-medium">
+                            {formatThaiBaht(product.price)}
                           </p>
                         </div>
                       </li>
@@ -252,8 +259,11 @@ const Search: React.FC = () => {
                   </ul>
                 ) : (
                   searchTerm.length >= 3 && (
-                    <div className="mt-4 text-center text-gray-500">
-                      No results found
+                    <div className="mt-4 text-gray-500 flex flex-col text-center justify-center">
+                      <p>ไม่พบผลการค้นหา</p>
+                      <p>
+                        ลองใช้คำอื่นที่แตกต่างหรือคำอื่นที่มีความหมายกว้างกว่านี้
+                      </p>
                     </div>
                   )
                 )}
