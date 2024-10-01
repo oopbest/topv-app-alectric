@@ -40,9 +40,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > */}
       <body className="font-sukhumvit">
-        <ThemeProvider>
-          <main>{children}</main>
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

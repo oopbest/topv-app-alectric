@@ -90,7 +90,7 @@ const ProductSearch: React.FC = () => {
           onClick={toggleModal}
           type="text"
           placeholder="ค้นหาสินค้า..."
-          className="flex-1 px-1 py-2 border-none outline-none focus:ring-0 text-sm"
+          className="flex-1 px-1 py-2 border-none outline-none focus:ring-0 text-base focus:outline-none"
         />
       </div>
 
