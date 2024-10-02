@@ -15,7 +15,7 @@ const MainMenu = () => {
       <Link
         href="/"
         className={`hover:underline underline-offset-4 lg:block ${
-          pathname !== "/" && "hidden"
+          pathname === "/" && "hidden"
         }`}
       >
         หน้าแรก
@@ -45,7 +45,7 @@ const MainMenu = () => {
       >
         เกี่ยวกับเรา
       </Link>
-      <span>ติดต่อเรา 1277</span>
+      <span className="lg:text-black">ติดต่อเรา 1277</span>
     </>
   );
 };
