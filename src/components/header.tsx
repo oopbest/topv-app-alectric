@@ -9,6 +9,7 @@ import ProductSearch from "./products/product-search";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  console.log(pathname);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

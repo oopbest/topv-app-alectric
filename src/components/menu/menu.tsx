@@ -14,8 +14,9 @@ const MainMenu = () => {
     <>
       <Link
         href="/"
-        className={`hover:underline underline-offset-4 lg:block ${
-          pathname === "/" && "hidden"
+        className={`${
+          pathname === "/" && "underline pointer-events-none"
+        }  hover:underline underline-offset-4
         }`}
       >
         หน้าแรก
@@ -23,25 +24,33 @@ const MainMenu = () => {
 
       <Link
         href={PRODUCTS_ROUTE_PATH}
-        className="hover:underline underline-offset-4"
+        className={`${
+          pathname === PRODUCTS_ROUTE_PATH && "underline pointer-events-none"
+        } hover:underline underline-offset-4`}
       >
         สินค้า
       </Link>
       <Link
         href={WARRANTY_ROUTE_PATH}
-        className="hover:underline underline-offset-4"
+        className={`${
+          pathname === WARRANTY_ROUTE_PATH && "underline pointer-events-none"
+        } hover:underline underline-offset-4`}
       >
         การรับประกัน
       </Link>
       <Link
         href={STORES_ROUTE_PATH}
-        className="hover:underline underline-offset-4"
+        className={`${
+          pathname === STORES_ROUTE_PATH && "underline pointer-events-none"
+        } hover:underline underline-offset-4`}
       >
         สั่งซื้อสินค้า
       </Link>
       <Link
         href={ABOUT_US_ROUTE_PATH}
-        className="hover:underline underline-offset-4"
+        className={`${
+          pathname === ABOUT_US_ROUTE_PATH && "underline pointer-events-none"
+        } hover:underline underline-offset-4`}
       >
         เกี่ยวกับเรา
       </Link>

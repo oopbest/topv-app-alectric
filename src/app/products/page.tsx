@@ -33,7 +33,9 @@ const ProductList = () => {
                         className="object-contain rounded-t-2xl"
                       />
                     </Link>
-                    <p className="px-5 line-clamp-2">{product.name}</p>
+                    <p className="h-12 lg:h-auto px-5 line-clamp-2">
+                      {product.name}
+                    </p>
                     <p className="font-bold">{formatThaiBaht(product.price)}</p>
                     <ProductRating rating={productRating} />
                     <Link
