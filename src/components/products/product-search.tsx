@@ -98,12 +98,6 @@ const Search: React.FC = () => {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
           <div className="modal-content bg-transparent text-white rounded-lg p-6 w-11/12 md:w-3/4 lg:w-2/3 max-w-3xl mx-auto fixed top-1/4">
-            {/* <button
-              onClick={toggleModal}
-              className="absolute top-2 right-2 text-gray-500"
-            >
-              &times;
-            </button> */}
             <div className="relative">
               <input
                 type="text"
