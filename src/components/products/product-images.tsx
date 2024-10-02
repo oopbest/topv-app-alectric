@@ -7,17 +7,29 @@ import { useState } from "react";
 // import clsx from "clsx";
 
 const images = [
-  "/images/img-carousel-01.jpg",
-  "/images/img-carousel-02.jpg",
-  "/images/img-carousel-03.jpg",
-  "/images/img-carousel-04.jpg",
+  {
+    id: 1,
+    path: "/images/img-carousel-01.jpg",
+  },
+  {
+    id: 2,
+    path: "/images/img-carousel-02.jpg",
+  },
+  {
+    id: 3,
+    path: "/images/img-carousel-03.jpg",
+  },
+  {
+    id: 4,
+    path: "/images/img-carousel-04.jpg",
+  },
 ];
 
 const ProductImages = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const notFoundImage = "/images/product-not-found.jpg";
-  const defaultImage = images[0];
   // const [activeSlide, setActiveSlide] = useState(0);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
 
   // Slick settings
   const settings = {
@@ -45,6 +57,7 @@ const ProductImages = () => {
       },
     ],
   };
+  // console.log('selected 'selectedImage);
 
   return (
     <div className="flex flex-col gap-3">
@@ -60,7 +73,7 @@ const ProductImages = () => {
         <Image
           width={600}
           height={456}
-          src={defaultImage}
+          src={images[0].path}
           alt=""
           className="w-full"
         />
@@ -68,9 +81,14 @@ const ProductImages = () => {
       {/* sliders */}
       <div className="max-w-xs mx-auto lg:px-8 md:max-w-md">
         <Slider {...settings}>
-          {images.map((src, index) => (
+          {images.map((image) => (
             <div
-              key={index}
+              key={image.id}
+              className={`px-2 ${
+                selectedImageIndex === image.id
+                  ? "border-2 border-theme-color outline-none"
+                  : ""
+              }`}
               // className={clsx(
               //   "slick-slide",
               //   "px-2", // Tailwind spacing for all slides
@@ -80,11 +98,14 @@ const ProductImages = () => {
               //     ? "border border-green-500" // Custom style for active slide
               //     : "opacity-75" // Custom style for non-active slides
               // )}
-              onClick={() => setSelectedImage(src)}
+              onClick={() => {
+                setSelectedImage(image.path);
+                setSelectedImageIndex(image.id);
+              }}
             >
               <Image
-                src={src}
-                alt={`Slide image ${index + 1}`}
+                src={image.path}
+                alt={`Slide image ${image.id}`}
                 width={600}
                 height={400}
                 className="max-w-full"
