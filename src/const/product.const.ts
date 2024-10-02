@@ -1,0 +1,1 @@
+export const notFoundImage = "/images/product-not-found.jpg";

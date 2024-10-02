@@ -55,7 +55,7 @@ export default function ProductDetailPage({ params }: Props) {
               <div className="flex gap-3 justify-center">
                 <Link
                   href="#"
-                  className="bg-white w-1/6 border-theme-color border"
+                  className="bg-white lg:w-1/5 border-theme-color border"
                 >
                   <Image
                     width={100}
@@ -67,7 +67,7 @@ export default function ProductDetailPage({ params }: Props) {
                 </Link>
                 <Link
                   href="#"
-                  className="bg-white w-1/6 border-theme-color border"
+                  className="bg-white lg:w-1/5 border-theme-color border"
                 >
                   <Image
                     width={100}
@@ -79,7 +79,7 @@ export default function ProductDetailPage({ params }: Props) {
                 </Link>
                 <Link
                   href="#"
-                  className="bg-white w-1/6 border-theme-color border"
+                  className="bg-white lg:w-1/5 border-theme-color border"
                 >
                   <Image
                     width={100}
@@ -91,7 +91,7 @@ export default function ProductDetailPage({ params }: Props) {
                 </Link>
                 <Link
                   href="#"
-                  className="bg-white w-1/6 border-theme-color border"
+                  className="bg-white lg:w-1/5 border-theme-color border"
                 >
                   <Image
                     width={100}
