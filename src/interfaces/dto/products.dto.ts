@@ -1,12 +1,21 @@
 export interface Product {
-    id: number;
-    name: string;
-    price: number;
-    stock: number;
-    image: string;
-    thumbnail?: string[]
-    short_description: string;
-    rating: number;
-    tags: string[],
-    category: string;
-  }
+  id: number;
+  sku: string;
+  name: string;
+  price: number;
+  special_price: number | undefined;
+  type_id: string;
+  saleable: boolean;
+  category_id: number;
+  url_key: string;
+  image: string | null;
+  reviews_count: number;
+  rating_summary: number;
+  star_rating: number;
+  position: string | number;
+  discount_rate?: number;
+}
+
+// export interface ProductsResponse extends Product {
+//   data: { items: Product[] } | undefined;
+// }

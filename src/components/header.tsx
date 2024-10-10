@@ -9,7 +9,6 @@ import ProductSearch from "./products/product-search";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  console.log(pathname);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -35,6 +34,7 @@ const Header = () => {
               src="/images/logo.svg"
               alt="Alectric Website Logo"
               className="w-24 h-auto md:w-32 lg:w-40"
+              priority={false}
             />
           </Link>
         </div>

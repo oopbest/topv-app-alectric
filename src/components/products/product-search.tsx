@@ -2,10 +2,23 @@ import Image from "next/image";
 import React, { useState, useRef, useEffect, ChangeEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { formatThaiBaht } from "@/utils/format-currency";
+import { formatThaiBaht } from "@/utils/format-currency.util";
 import allproducts from "@mockup/allproducts.json";
-import { Product } from "@/interfaces/dto/products.dto";
+// import { Product } from "@/interfaces/dto/products.dto";
 import { useRouter } from "next/navigation";
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  stock: number;
+  image: string;
+  thumbnail?: string[];
+  short_description: string;
+  rating: number;
+  tags: string[];
+  category: string;
+}
 
 const Search: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");

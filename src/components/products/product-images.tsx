@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 import { PrevArrow, NextArrow } from "./slick-arrow-custom";
 import { useState } from "react";
+import { PRODUCT_NOT_FOUND_IMG } from "@/const/product.const";
 // import clsx from "clsx";
 
 const images = [
@@ -27,7 +28,6 @@ const images = [
 
 const ProductImages = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const notFoundImage = "/images/product-not-found.jpg";
   // const [activeSlide, setActiveSlide] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
 
@@ -57,7 +57,6 @@ const ProductImages = () => {
       },
     ],
   };
-  // console.log('selected 'selectedImage);
 
   return (
     <div className="flex flex-col gap-3">
@@ -65,7 +64,7 @@ const ProductImages = () => {
         <Image
           width={600}
           height={456}
-          src={selectedImage ? selectedImage : notFoundImage}
+          src={selectedImage ? selectedImage : PRODUCT_NOT_FOUND_IMG}
           alt=""
           className="w-full"
         />

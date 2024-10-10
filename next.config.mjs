@@ -2,7 +2,7 @@
 // const nextConfig = {};
 const nextConfig = {
   images: {
-    domains: ["picsum.photos"], // Allow images from picsum.photos
+    domains: ["picsum.photos", "fakestoreapi.com", "cdn.topvalue.asia"], // Allow images from picsum.photos
   },
 };
 
