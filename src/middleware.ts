@@ -4,8 +4,7 @@ import type { NextRequest } from 'next/server';
 export async function middleware(req: NextRequest) {
   const accessToken = req.cookies.get('ACCESS_TOKEN')?.value;
   // const refreshToken = req.cookies.get('refresh_token')?.value;
-
-  if(accessToken){
+  if(accessToken === undefined){
 
     // const { exp } = JSON.parse(atob(accessToken.split('.')[1])); // decode JWT payload
     // const currentTime = Math.floor(Date.now() / 1000);

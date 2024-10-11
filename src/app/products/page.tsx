@@ -56,6 +56,7 @@ const fetchProducts = async () => {
     }
   );
   if (res.status !== 200) {
+    console.log(res.status);
     throw new Error("Failed to fetch products");
   }
   return res.json();

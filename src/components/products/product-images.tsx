@@ -5,28 +5,34 @@ import Image from "next/image";
 import { PrevArrow, NextArrow } from "./slick-arrow-custom";
 import { useState } from "react";
 import { PRODUCT_NOT_FOUND_IMG } from "@/const/product.const";
+import { ProductMedia } from "@/interfaces/dto/product-detail.dto";
 // import clsx from "clsx";
 
-const images = [
-  {
-    id: 1,
-    path: "/images/img-carousel-01.jpg",
-  },
-  {
-    id: 2,
-    path: "/images/img-carousel-02.jpg",
-  },
-  {
-    id: 3,
-    path: "/images/img-carousel-03.jpg",
-  },
-  {
-    id: 4,
-    path: "/images/img-carousel-04.jpg",
-  },
-];
+// const images = [
+//   {
+//     id: 1,
+//     path: "/images/img-carousel-01.jpg",
+//   },
+//   {
+//     id: 2,
+//     path: "/images/img-carousel-02.jpg",
+//   },
+//   {
+//     id: 3,
+//     path: "/images/img-carousel-03.jpg",
+//   },
+//   {
+//     id: 4,
+//     path: "/images/img-carousel-04.jpg",
+//   },
+// ];
 
-const ProductImages = () => {
+interface Props {
+  images: ProductMedia[];
+}
+
+const ProductImages = ({ images }: Props) => {
+  console.log(images);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   // const [activeSlide, setActiveSlide] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
@@ -72,7 +78,7 @@ const ProductImages = () => {
         <Image
           width={600}
           height={456}
-          src={images[0].path}
+          src={images[0].media_path}
           alt=""
           className="w-full"
         />
@@ -80,11 +86,11 @@ const ProductImages = () => {
       {/* sliders */}
       <div className="max-w-xs mx-auto lg:px-8 md:max-w-md">
         <Slider {...settings}>
-          {images.map((image) => (
+          {images.map((image, index) => (
             <div
-              key={image.id}
+              key={index}
               className={`px-2 ${
-                selectedImageIndex === image.id
+                selectedImageIndex === Number(image.position)
                   ? "border-2 border-theme-color outline-none"
                   : ""
               }`}
@@ -98,13 +104,13 @@ const ProductImages = () => {
               //     : "opacity-75" // Custom style for non-active slides
               // )}
               onClick={() => {
-                setSelectedImage(image.path);
-                setSelectedImageIndex(image.id);
+                setSelectedImage(image.media_path);
+                setSelectedImageIndex(Number(image.position));
               }}
             >
               <Image
-                src={image.path}
-                alt={`Slide image ${image.id}`}
+                src={image.media_path}
+                alt={`Slide image ${image.position}`}
                 width={600}
                 height={400}
                 className="max-w-full"

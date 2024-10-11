@@ -22,7 +22,7 @@ const ProductItem = ({ products }: Props) => {
             className="bg-white flex items-center justify-center rounded-2xl overflow-hidden"
           >
             <div className="flex flex-col text-center gap-3">
-              <Link href={`products/${product.id}`}>
+              <Link href={`products/${product.url_key}`}>
                 <div className="lg:min-h-[400px] overflow-hidden">
                   {product.image ? (
                     <Image
@@ -48,7 +48,7 @@ const ProductItem = ({ products }: Props) => {
                 <p className="font-bold">{formatThaiBaht(product.price)}</p>
                 {/* <ProductRating rating={productRating} /> */}
                 <Link
-                  href={`products/${product.id}`}
+                  href={`products/${product.url_key}`}
                   className="bg-theme-color px-5 py-3 text-white mx-3"
                 >
                   เรียนรู้เพิ่มเติม
