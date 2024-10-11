@@ -32,8 +32,11 @@ interface Props {
 }
 
 const ProductImages = ({ images }: Props) => {
-  console.log(images);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const defaultImage =
+    images && images.length > 0 ? images[0]?.media_path : PRODUCT_NOT_FOUND_IMG;
+  const [selectedImage, setSelectedImage] = useState<string | null>(
+    defaultImage
+  );
   // const [activeSlide, setActiveSlide] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
 
@@ -66,59 +69,61 @@ const ProductImages = ({ images }: Props) => {
 
   return (
     <div className="flex flex-col gap-3">
-      {selectedImage ? (
+      {selectedImage && images.length > 0 ? (
         <Image
           width={600}
           height={456}
-          src={selectedImage ? selectedImage : PRODUCT_NOT_FOUND_IMG}
-          alt=""
-          className="w-full"
+          src={selectedImage}
+          alt="ttt"
+          className="max-w-full"
         />
       ) : (
         <Image
           width={600}
           height={456}
-          src={images[0].media_path}
-          alt=""
-          className="w-full"
+          src={defaultImage}
+          alt="Image not found"
+          className="max-w-full"
         />
       )}
       {/* sliders */}
-      <div className="max-w-xs mx-auto lg:px-8 md:max-w-md">
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`px-2 ${
-                selectedImageIndex === Number(image.position)
-                  ? "border-2 border-theme-color outline-none"
-                  : ""
-              }`}
-              // className={clsx(
-              //   "slick-slide",
-              //   "px-2", // Tailwind spacing for all slides
-              //   "transition-transform duration-300",
-              //   index === 0 ? "bla_bla" : "", // Default to first slide
-              //   index === activeSlide
-              //     ? "border border-green-500" // Custom style for active slide
-              //     : "opacity-75" // Custom style for non-active slides
-              // )}
-              onClick={() => {
-                setSelectedImage(image.media_path);
-                setSelectedImageIndex(Number(image.position));
-              }}
-            >
-              <Image
-                src={image.media_path}
-                alt={`Slide image ${image.position}`}
-                width={600}
-                height={400}
-                className="max-w-full"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      {images.length > 0 && (
+        <div className="max-w-xs mx-auto lg:px-8 md:max-w-md">
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`px-2 ${
+                  selectedImageIndex === Number(image.position)
+                    ? "border-2 border-theme-color outline-none"
+                    : ""
+                }`}
+                // className={clsx(
+                //   "slick-slide",
+                //   "px-2", // Tailwind spacing for all slides
+                //   "transition-transform duration-300",
+                //   index === 0 ? "bla_bla" : "", // Default to first slide
+                //   index === activeSlide
+                //     ? "border border-green-500" // Custom style for active slide
+                //     : "opacity-75" // Custom style for non-active slides
+                // )}
+                onClick={() => {
+                  setSelectedImage(image.media_path);
+                  setSelectedImageIndex(Number(image.position));
+                }}
+              >
+                <Image
+                  src={image.media_path}
+                  alt={`Slide image ${image.position}`}
+                  width={600}
+                  height={400}
+                  className="max-w-full"
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      )}
     </div>
   );
 };
