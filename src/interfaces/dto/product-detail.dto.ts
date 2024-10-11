@@ -20,7 +20,7 @@ export interface VideoMedia {
 
 export interface ProductWarranty {
   text: string;
-  image?: any;
+  image?: string | undefined;
 }
 
 export interface ProductCustomize {
@@ -56,7 +56,7 @@ export interface CustomizeStock {
 
 export interface ProductShipping {
   text: string;
-  image?: any;
+  image?: string | undefined;
 }
 
 export interface ProductAdditionalInformation {
