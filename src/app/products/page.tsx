@@ -19,7 +19,7 @@ const fetchProducts = async () => {
   const accessToken = cookieStore.get("ACCESS_TOKEN")?.value;
 
   // compose Query
-  const categoryId = String(process.env.NEXT_PUBLIC_DEFAULT_CATEGORY_ID);
+  const brandId = String(process.env.NEXT_PUBLIC_DEFAULT_CATEGORY_ID);
   const productDisplayConfig: ProductDisplayConfig = {
     pageSize: PRODUCT_PAGE_SIZE,
     currentPage: PRODUCT_DEFAULT_PAGE,
@@ -27,11 +27,12 @@ const fetchProducts = async () => {
     sortDirection: "ASC",
   };
   let query: string | undefined = undefined;
-  if (categoryId) {
+  if (brandId) {
     const queryCat = getFilterQuery({
-      field: "category_id",
-      value: categoryId,
-      layer: 0,
+      field: "brand",
+      value: brandId.toString(),
+      layer: 3,
+      cond: "in",
     });
     const { pageSize, currentPage, sortBy, sortDirection } =
       productDisplayConfig;
@@ -46,7 +47,7 @@ const fetchProducts = async () => {
   }
 
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/nextapi/products?${query}&searchCriteria[sortOrders][1][field]=entity_id&searchCriteria[sortOrders][1][direction]=ASC`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/nextapi/products?${query}`,
     {
       method: "GET",
       headers: {

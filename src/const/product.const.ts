@@ -4,7 +4,7 @@ import { DropdownOption, ProductSortBy } from "@/interfaces/product-filter.inter
 export const PRODUCT_PRICE_FILTER_STEP = 1;
 
 // product display filter
-export const PRODUCT_DEFAULT_SORT_BY: ProductSortBy = "position";
+export const PRODUCT_DEFAULT_SORT_BY: ProductSortBy = "name";
 export const PRODUCT_SORT_LIST: DropdownOption[] = [
   { value: "name", label: "ชื่อ" },
   { value: "position", label: "ตำแหน่ง" },
