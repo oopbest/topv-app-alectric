@@ -17,7 +17,7 @@ export const PRODUCT_GROUP_DEFAULT_SORT_BY: ProductSortBy = "random";
 
 // product paging
 export const PRODUCT_DEFAULT_PAGE = 1;
-export const PRODUCT_PAGE_SIZE = 16;
+export const PRODUCT_PAGE_SIZE = 9;
 
 // product images
 export const PRODUCT_NOT_FOUND_IMG = "/images/product-not-found.jpg";

@@ -1,5 +1,6 @@
 "use client";
 
+import { PRODUCT_PAGE_SIZE } from "@/const/product.const";
 import { Product } from "@/interfaces/dto/products.dto";
 import { formatThaiBaht } from "@/utils/format-currency.util";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -22,7 +23,9 @@ export default function ProductsItem({
   const [products, setProducts] = useState(initialProducts); // Use initial products from SSR
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [hasMore, setHasMore] = useState(initialProducts.length === 10); // Assume more products if initial batch is full
+  const [hasMore, setHasMore] = useState(
+    initialProducts.length === PRODUCT_PAGE_SIZE
+  ); // Assume more products if initial batch is full
 
   const loadMoreProducts = async () => {
     setLoading(true);
@@ -40,7 +43,7 @@ export default function ProductsItem({
       if (data && data.length > 0) {
         setProducts((prev) => [...prev, ...data]); // Append new products
         setPage((prev) => prev + 1); // Increment page
-        setHasMore(data.length === 10); // Check if there are more products to load
+        setHasMore(data.length === PRODUCT_PAGE_SIZE); // Check if there are more products to load
       } else {
         setHasMore(false); // No more products to load
       }

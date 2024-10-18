@@ -11,13 +11,13 @@ export async function GET(request: Request) {
     }
 
     const { searchParams } = new URL(request.url);
-    const page = searchParams.get('page') || 1;
-    const limit = searchParams.get('limit') || 10;
+    const page = searchParams.get('page') || PRODUCT_DEFAULT_PAGE;
+    const limit = searchParams.get('limit') || PRODUCT_PAGE_SIZE;
 
     const brandId = process.env.NEXT_PUBLIC_DEFAULT_CATEGORY_ID
     const productDisplayConfig: ProductDisplayConfig = {
-        pageSize: limit ? Number(limit) : PRODUCT_PAGE_SIZE,
-        currentPage: page ? Number(page) : PRODUCT_DEFAULT_PAGE,
+        pageSize: Number(limit),
+        currentPage: Number(page),
         sortBy: PRODUCT_DEFAULT_SORT_BY,
         sortDirection: "ASC",
       };
