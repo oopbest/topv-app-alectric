@@ -2,6 +2,7 @@ import YouTubeEmbed from "@/components/youtube-embed";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const video_id = "5_yygU9ecMQ?si=yAFYnNc7oisSlVUQ";
@@ -57,13 +58,15 @@ export default function Home() {
             />
           </div>
           <div className="flex-1">
-            <Image
-              width={500}
-              height={500}
-              src="https://picsum.photos/500/500"
-              alt=""
-              className="max-w-full"
-            />
+            <Link href="/alectric">
+              <Image
+                width={500}
+                height={500}
+                src="https://picsum.photos/500/500"
+                alt=""
+                className="max-w-full"
+              />
+            </Link>
           </div>
           <div className="flex-1">
             <Image
