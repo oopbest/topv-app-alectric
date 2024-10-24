@@ -1,6 +1,4 @@
 import YouTubeEmbed from "@/components/youtube-embed";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,9 +13,8 @@ export default function Home() {
         {/* Aboutus */}
         <div className="flex flex-col items-center lg:flex-none lg:items-start  relative lg:mb-20 lg:mt-10">
           <Image
-            width={700}
-            height={400}
-            // src="https://picsum.photos/700/400"
+            width={750}
+            height={500}
             src="/images/company-image.jpg"
             alt=""
             className="max-w-full"
@@ -38,8 +35,13 @@ export default function Home() {
             </p>
             <button className="flex items-center px-6 py-3 mt-3 bg-theme-secondary text-white rounded relative group transition">
               <span className="mr-2">ดูเพิ่มเติม</span>
-              <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-2">
-                <FontAwesomeIcon icon={faChevronRight} />
+              <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
+                <Image
+                  src="/images/btn-arrow-white.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                />
               </span>
             </button>
           </div>
@@ -48,37 +50,68 @@ export default function Home() {
           Switchflex Brands
         </h1>
         <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex-1">
+          <div className="flex-1 relative">
             <Image
               width={500}
               height={500}
-              src="https://picsum.photos/500/500"
+              src="/images/brand-altec.jpg"
               alt=""
               className="max-w-full"
             />
-          </div>
-          <div className="flex-1">
-            <Link href="/alectric">
-              <Image
-                width={500}
-                height={500}
-                src="https://picsum.photos/500/500"
-                alt=""
-                className="max-w-full"
-              />
+            <Link href="#" className="absolute bottom-4 left-1/2">
+              <div className="flex items-center justify-center w-10 h-10 bg-white shadow rounded-full group">
+                <Image
+                  src="/images/btn-arrow-green.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                  className="transition-transform duration-300 transform group-hover:translate-x-1"
+                />
+              </div>
             </Link>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 relative">
             <Image
               width={500}
               height={500}
-              src="https://picsum.photos/500/500"
+              src="/images/brand-alectric.jpg"
               alt=""
               className="max-w-full"
             />
+            <Link href="/alectric" className="absolute bottom-4 left-1/2">
+              <div className="flex items-center justify-center w-10 h-10 bg-white shadow rounded-full group">
+                <Image
+                  src="/images/btn-arrow-green.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                  className="transition-transform duration-300 transform group-hover:translate-x-1"
+                />
+              </div>
+            </Link>
+          </div>
+          <div className="flex-1 relative">
+            <Image
+              width={500}
+              height={500}
+              src="/images/brand-namiko.jpg"
+              alt=""
+              className="max-w-full"
+            />
+            <Link href="#" className="absolute bottom-4 left-1/2">
+              <div className="flex items-center justify-center w-10 h-10 bg-white shadow rounded-full group">
+                <Image
+                  src="/images/btn-arrow-green.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                  className="transition-transform duration-300 transform group-hover:translate-x-1"
+                />
+              </div>
+            </Link>
           </div>
         </div>
-        <div className="py-3">
+        <div className="py-3 relative">
           <Image
             width={1248}
             height={382}
@@ -86,22 +119,59 @@ export default function Home() {
             alt="Fennix"
             className="w-full"
           />
+          <Link href="#" className="absolute bottom-8 left-1/2">
+            <div className="flex items-center justify-center w-10 h-10 bg-white shadow rounded-full group">
+              <Image
+                src="/images/btn-arrow-green.svg"
+                alt="Arrow"
+                width={20}
+                height={20}
+                className="transition-transform duration-300 transform group-hover:translate-x-1"
+              />
+            </div>
+          </Link>
         </div>
         <div className="flex flex-col sm:flex-row justify-between gap-4">
-          <Image
-            width={750}
-            height={367}
-            src="/images/brand-sce.jpg"
-            alt="Sce"
-            className="max-w-full"
-          />
-          <Image
-            width={750}
-            height={367}
-            src="/images/brand-cocogu.jpg"
-            alt="Cocogu"
-            className="max-w-full"
-          />
+          <div className="flex-1 relative">
+            <Image
+              width={750}
+              height={367}
+              src="/images/brand-sce.jpg"
+              alt="Sce"
+              className="max-w-full"
+            />
+            <Link href="#" className="absolute bottom-8 left-1/2">
+              <div className="flex items-center justify-center w-10 h-10 bg-white shadow rounded-full group">
+                <Image
+                  src="/images/btn-arrow-green.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                  className="transition-transform duration-300 transform group-hover:translate-x-1"
+                />
+              </div>
+            </Link>
+          </div>
+          <div className="flex-1 relative">
+            <Image
+              width={750}
+              height={367}
+              src="/images/brand-cocogu.jpg"
+              alt="Cocogu"
+              className="max-w-full"
+            />
+            <Link href="#" className="absolute bottom-8 left-1/2">
+              <div className="flex items-center justify-center w-10 h-10 bg-white shadow rounded-full group">
+                <Image
+                  src="/images/btn-arrow-green.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                  className="transition-transform duration-300 transform group-hover:translate-x-1"
+                />
+              </div>
+            </Link>
+          </div>
         </div>
 
         {/* Products Recommend */}
@@ -124,22 +194,15 @@ export default function Home() {
               รองรับน้ำหนักได้มาก
             </p>
           </div>
-          <div className="flex-1 lg:flex-none">
+          <div className="flex-1">
             <Image
-              width={570}
-              height={590}
-              src="/images/product-recommend.jpg"
+              width={800}
+              height={600}
+              src="/images/product-recommend.png"
               alt="Fennix Ergonomic Desk โต๊ะปรับระดับอัตโนมัติด้วยระบบไฟฟ้า Size 120*60cm. รับประกันศูนย์ไทย 3 ปี"
               className="max-w-full"
             />
           </div>
-          {/* <Image
-              width={608}
-              height={590}
-              src="https://picsum.photos/608/590"
-              alt=""
-              className="max-w-full"
-            /> */}
         </div>
 
         {/* Alectric Products */}
@@ -149,18 +212,11 @@ export default function Home() {
               <Image
                 width={500}
                 height={400}
-                src="https://picsum.photos/400/400"
-                alt=""
-                className="max-w-full"
-              />
-              {/* <Image
-                width={370}
-                height={555}
                 src="/images/alectric-product-1.jpg"
                 alt="Alectric Pet Smart Cat Litter Box ห้องน้ำแมวอัจฉริยะ เชื่อมแอปฯได้
                 พร้อมระบบฆ่าเชื้อ รุ่น LB1 - รับประกัน 3 ปี"
                 className="max-w-full"
-              /> */}
+              />
               <h3 className="font-bold">
                 Alectric Pet Smart Cat Litter Box ห้องน้ำแมวอัจฉริยะ
                 เชื่อมแอปฯได้ พร้อมระบบฆ่าเชื้อ รุ่น LB1 - รับประกัน 3 ปี
@@ -179,18 +235,11 @@ export default function Home() {
           </div>
           <div className="flex-1">
             <div className="flex flex-col gap-4">
-              {/* <Image
+              <Image
                 width={500}
                 height={400}
                 src="/images/alectric-product-2.jpg"
                 alt="Alectric Smart Pet Feeder เครื่องให้อาหารอัจฉริยะ มีกล้องพร้อมไมค์ เชื่อมแอพได้ 5L รุ่น Smart PF1 - รับประกัน 3 ปี"
-                className="max-w-full"
-              /> */}
-              <Image
-                width={500}
-                height={400}
-                src="https://picsum.photos/400/400"
-                alt=""
                 className="max-w-full"
               />
               <h3 className="font-bold">
@@ -215,18 +264,11 @@ export default function Home() {
           </div>
           <div className="flex-1">
             <div className="flex flex-col gap-4">
-              {/* <Image
+              <Image
                 width={500}
                 height={400}
                 src="/images/alectric-product-3.jpg"
                 alt="Alectric Pet Smart Water Fountain น้ำพุสัตว์เลี้ยงอัตโนมัติ 1.5L รุ่น FT1 - รับประกัน 3 ปี"
-                className="max-w-full"
-              /> */}
-              <Image
-                width={500}
-                height={400}
-                src="https://picsum.photos/400/400"
-                alt=""
                 className="max-w-full"
               />
               <h3 className="font-bold">
@@ -263,8 +305,13 @@ export default function Home() {
             </p>
             <button className="flex items-center px-6 py-3 mt-3 bg-emerald-800 text-white rounded relative group transition">
               <span className="mr-2">ดูเพิ่มเติม</span>
-              <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-2">
-                <FontAwesomeIcon icon={faChevronRight} />
+              <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
+                <Image
+                  src="/images/btn-arrow-white.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                />
               </span>
             </button>
           </div>
@@ -310,8 +357,13 @@ export default function Home() {
             <div className="inline-block">
               <button className="flex px-6 py-3 mt-3 bg-emerald-800 text-white rounded group transition">
                 <span className="mr-2">ดูเพิ่มเติม</span>
-                <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-2">
-                  <FontAwesomeIcon icon={faChevronRight} />
+                <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
+                  <Image
+                    src="/images/btn-arrow-white.svg"
+                    alt="Arrow"
+                    width={20}
+                    height={20}
+                  />
                 </span>
               </button>
             </div>
@@ -338,8 +390,13 @@ export default function Home() {
             <div className="inline-block">
               <button className="flex px-6 py-3 mt-3 border border-emerald-800 text-emerald-800 rounded group transition">
                 <span className="mr-2">ดูเพิ่มเติม</span>
-                <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-2">
-                  <FontAwesomeIcon icon={faChevronRight} />
+                <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
+                  <Image
+                    src="/images/btn-arrow-green.svg"
+                    alt="Arrow"
+                    width={20}
+                    height={20}
+                  />
                 </span>
               </button>
             </div>
@@ -385,8 +442,13 @@ export default function Home() {
             <div className="inline-block">
               <button className="flex px-6 py-3 mt-3 border border-emerald-800 text-emerald-800 rounded group transition">
                 <span className="mr-2">ดูเพิ่มเติม</span>
-                <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-2">
-                  <FontAwesomeIcon icon={faChevronRight} />
+                <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
+                  <Image
+                    src="/images/btn-arrow-green.svg"
+                    alt="Arrow"
+                    width={20}
+                    height={20}
+                  />
                 </span>
               </button>
             </div>
