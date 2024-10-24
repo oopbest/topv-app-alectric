@@ -2,7 +2,6 @@ import YouTubeEmbed from "@/components/youtube-embed";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   const video_id = "5_yygU9ecMQ?si=yAFYnNc7oisSlVUQ";
@@ -12,74 +11,89 @@ export default function Home() {
         <YouTubeEmbed videoId={video_id} />
       </div>
       <section className="mx-auto container p-4">
+        {/* Aboutus */}
+        <div className="flex flex-col items-center lg:flex-none lg:items-start  relative lg:mb-20 lg:mt-10">
+          <Image
+            width={700}
+            height={400}
+            // src="https://picsum.photos/700/400"
+            src="/images/company-image.jpg"
+            alt=""
+            className="max-w-full"
+          />
+          <div className="mt-3 lg:w-1/2 lg:absolute lg:-bottom-10 lg:right-0 p-6 text-sm space-y-4 bg-white shadow-md">
+            <p className="text-gray-500">เกี่ยวกับ</p>
+            <h3 className="text-theme-secondary font-bold text-2xl">
+              บริษัท สวิทซ เฟลคซ จำกัด
+            </h3>
+            <p>
+              ก่อตั้งขึ้นเมื่อปี 2005
+              โดยกลุ่มวิศวกรที่มีความเชี่ยวชาญในงานเครื่องจักรโดยเฉพาะ
+              และดำเนินธุรกิจนำเข้าและส่งออกเครื่องจักร
+              ทั้งขนาดเล็กและขนาดใหญ่สำหรับงานอุตสาหกรรม จนกระทั่งในปี 2019
+              คณะผู้ก่อตั้งบริษัท
+              ได้เล็งเห็นถึงโอกาสในการนำเครื่องจักรและเทคโนโลยี
+              มาพัฒนาต่อยอดเพื่อผลิตเป็นเครื่องใช้ไฟฟ้าในครัวเรือน
+            </p>
+            <button className="flex items-center px-6 py-3 mt-3 bg-theme-secondary text-white rounded relative group transition">
+              <span className="mr-2">ดูเพิ่มเติม</span>
+              <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-2">
+                <FontAwesomeIcon icon={faChevronRight} />
+              </span>
+            </button>
+          </div>
+        </div>
         <h1 className="text-3xl uppercase pt-6 text-theme-secondary pb-6">
           Switchflex Brands
         </h1>
-        <div className="flex flex-col sm:flex-row justify-between gap-4">
-          {/* <Image
-          width={370}
-          height={555}
-          src="/images/brand-altec.jpg"
-          alt="Altec"
-          className="max-w-full"
-        /> */}
-          <Image
-            width={427}
-            height={500}
-            src="https://picsum.photos/427/500"
-            alt=""
-            className="max-w-full"
-          />
-          <Link href={"/alectric"}>
-            {/* <Image
-            width={370}
-            height={555}
-            src="/images/brand-alectric.jpg"
-            alt="Alectric"
-            className="max-w-full"
-          /> */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex-1">
             <Image
-              width={427}
+              width={500}
               height={500}
-              src="https://picsum.photos/427/500"
+              src="https://picsum.photos/500/500"
               alt=""
               className="max-w-full"
             />
-          </Link>
-          {/* <Image
-          width={370}
-          height={555}
-          src="/images/brand-namiko.jpg"
-          alt="Namiko"
-          className="max-w-full"
-        /> */}
-          <Image
-            width={427}
-            height={500}
-            src="https://picsum.photos/427/500"
-            alt=""
-            className="max-w-full"
-          />
+          </div>
+          <div className="flex-1">
+            <Image
+              width={500}
+              height={500}
+              src="https://picsum.photos/500/500"
+              alt=""
+              className="max-w-full"
+            />
+          </div>
+          <div className="flex-1">
+            <Image
+              width={500}
+              height={500}
+              src="https://picsum.photos/500/500"
+              alt=""
+              className="max-w-full"
+            />
+          </div>
         </div>
         <div className="py-3">
           <Image
-            width={300}
-            height={300}
+            width={1248}
+            height={382}
             src="/images/brand-fennix.jpg"
             alt="Fennix"
             className="w-full"
           />
         </div>
-        <div className="flex flex-col sm:flex-row justify-around gap-4">
+        <div className="flex flex-col sm:flex-row justify-between gap-4">
           <Image
-            width={616}
+            width={750}
             height={367}
             src="/images/brand-sce.jpg"
             alt="Sce"
             className="max-w-full"
           />
           <Image
-            width={616}
+            width={750}
             height={367}
             src="/images/brand-cocogu.jpg"
             alt="Cocogu"
@@ -92,7 +106,7 @@ export default function Home() {
           สินค้าแนะนำ
         </h1>
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <div className="flex-1">
+          <div className="flex-1 sm:pe-8">
             <h3 className="text-3xl">
               Fennix Ergonomic Desk โต๊ะปรับระดับอัตโนมัติด้วยระบบไฟฟ้า Size
               120*60cm. รับประกันศูนย์ไทย 3 ปี
@@ -128,22 +142,22 @@ export default function Home() {
         {/* Alectric Products */}
         <div className="flex flex-col sm:flex-row justify-between pt-6 gap-4">
           <div className="flex-1">
-            {/* <Image
-            width={370}
-            height={555}
-            src="/images/alectric-product-1.jpg"
-            alt="Alectric Pet Smart Cat Litter Box ห้องน้ำแมวอัจฉริยะ เชื่อมแอปฯได้
-            พร้อมระบบฆ่าเชื้อ รุ่น LB1 - รับประกัน 3 ปี"
-            className="max-w-full"
-          /> */}
             <div className="flex flex-col gap-4">
               <Image
-                width={400}
+                width={500}
                 height={400}
                 src="https://picsum.photos/400/400"
                 alt=""
                 className="max-w-full"
               />
+              {/* <Image
+                width={370}
+                height={555}
+                src="/images/alectric-product-1.jpg"
+                alt="Alectric Pet Smart Cat Litter Box ห้องน้ำแมวอัจฉริยะ เชื่อมแอปฯได้
+                พร้อมระบบฆ่าเชื้อ รุ่น LB1 - รับประกัน 3 ปี"
+                className="max-w-full"
+              /> */}
               <h3 className="font-bold">
                 Alectric Pet Smart Cat Litter Box ห้องน้ำแมวอัจฉริยะ
                 เชื่อมแอปฯได้ พร้อมระบบฆ่าเชื้อ รุ่น LB1 - รับประกัน 3 ปี
@@ -161,16 +175,16 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1">
-            {/* <Image
-            width={370}
-            height={555}
-            src="/images/alectric-product-2.jpg"
-            alt="Alectric Smart Pet Feeder เครื่องให้อาหารอัจฉริยะ มีกล้องพร้อมไมค์ เชื่อมแอพได้ 5L รุ่น Smart PF1 - รับประกัน 3 ปี"
-            className="max-w-full"
-          /> */}
             <div className="flex flex-col gap-4">
+              {/* <Image
+                width={500}
+                height={400}
+                src="/images/alectric-product-2.jpg"
+                alt="Alectric Smart Pet Feeder เครื่องให้อาหารอัจฉริยะ มีกล้องพร้อมไมค์ เชื่อมแอพได้ 5L รุ่น Smart PF1 - รับประกัน 3 ปี"
+                className="max-w-full"
+              /> */}
               <Image
-                width={400}
+                width={500}
                 height={400}
                 src="https://picsum.photos/400/400"
                 alt=""
@@ -197,16 +211,16 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1">
-            {/* <Image
-            width={370}
-            height={555}
-            src="/images/alectric-product-3.jpg"
-            alt="Alectric Pet Smart Water Fountain น้ำพุสัตว์เลี้ยงอัตโนมัติ 1.5L รุ่น FT1 - รับประกัน 3 ปี"
-            className="max-w-full"
-          /> */}
             <div className="flex flex-col gap-4">
+              {/* <Image
+                width={500}
+                height={400}
+                src="/images/alectric-product-3.jpg"
+                alt="Alectric Pet Smart Water Fountain น้ำพุสัตว์เลี้ยงอัตโนมัติ 1.5L รุ่น FT1 - รับประกัน 3 ปี"
+                className="max-w-full"
+              /> */}
               <Image
-                width={400}
+                width={500}
                 height={400}
                 src="https://picsum.photos/400/400"
                 alt=""

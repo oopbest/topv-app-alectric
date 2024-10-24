@@ -7,11 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 // -- Brand icons
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLine } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import {
   FOLLOW_FACEBOOK_ROUTE_PATH,
@@ -129,7 +128,7 @@ const Footer = () => {
                   title="Line"
                   href={FOLLOW_LINE_ROUTE_PATH}
                 >
-                  <FontAwesomeIcon icon={faLine} className="pe-2" /> Line
+                  <FontAwesomeIcon icon={faLine} className="pe-1" /> Line
                 </a>
               </li>
               <li>
@@ -139,7 +138,7 @@ const Footer = () => {
                   title="Youtube"
                   href={FOLLOW_YOUTUBE_ROUTE_PATH}
                 >
-                  <FontAwesomeIcon icon={faYoutube} className="pe-2" /> Youtube
+                  <FontAwesomeIcon icon={faYoutube} className="pe-1" /> Youtube
                 </a>
               </li>
               <li>
@@ -149,7 +148,7 @@ const Footer = () => {
                   title="Instagram"
                   href={FOLLOW_INSTAGRAM_ROUTE_PATH}
                 >
-                  <FontAwesomeIcon icon={faInstagram} className="pe-2" />{" "}
+                  <FontAwesomeIcon icon={faInstagram} className="pe-3" />
                   Instagram
                 </a>
               </li>
@@ -160,7 +159,7 @@ const Footer = () => {
                   title="Twitter"
                   href={FOLLOW_TWITTER_ROUTE_PATH}
                 >
-                  <FontAwesomeIcon icon={faTwitter} className="pe-2" /> Twitter
+                  <FontAwesomeIcon icon={faXTwitter} className="pe-1" /> Twitter
                 </a>
               </li>
             </ul>

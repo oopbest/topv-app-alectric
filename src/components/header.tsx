@@ -5,6 +5,22 @@ import MainMenu from "./menu/menu";
 import MobileMenu from "./menu/menu-mobile";
 import { usePathname } from "next/navigation";
 import ProductSearch from "./products/product-search";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faLine,
+  faXTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  FOLLOW_FACEBOOK_ROUTE_PATH,
+  FOLLOW_INSTAGRAM_ROUTE_PATH,
+  FOLLOW_LINE_ROUTE_PATH,
+  FOLLOW_TWITTER_ROUTE_PATH,
+  FOLLOW_YOUTUBE_ROUTE_PATH,
+} from "@/const/route-paths.const";
+import { faEnvelope, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +38,74 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="sticky top-0 z-10 bg-white px-4 py-2 border-b lg:py-0 shadow-lg"
+      className="sticky top-0 z-10 bg-white border-b lg:py-0 shadow-lg"
     >
-      <section className="flex mx-auto container items-center justify-between">
+      <div className="bg-black text-white">
+        <div className="flex px-4 py-2 justify-center sm:justify-between">
+          <div className="hidden sm:flex space-x-4">
+            <span>
+              <FontAwesomeIcon icon={faMobileScreen} /> +(66)2-026-6225
+            </span>
+            <span>
+              <FontAwesomeIcon icon={faEnvelope} /> Service@switchflex.com
+            </span>
+          </div>
+
+          <ul className="flex space-x-4">
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Facebook Page"
+                href={FOLLOW_FACEBOOK_ROUTE_PATH}
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Line"
+                href={FOLLOW_LINE_ROUTE_PATH}
+              >
+                <FontAwesomeIcon icon={faLine} />
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Youtube"
+                href={FOLLOW_YOUTUBE_ROUTE_PATH}
+              >
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Instagram"
+                href={FOLLOW_INSTAGRAM_ROUTE_PATH}
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Twitter"
+                href={FOLLOW_TWITTER_ROUTE_PATH}
+              >
+                <FontAwesomeIcon icon={faXTwitter} />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section className="flex px-4 py-2 lg:py-0 mx-auto container items-center justify-between">
         {/* Logo */}
         <div className="lg:order-first lg:basis-1/6 lg:p-0">
           <Link href="/" title="">
