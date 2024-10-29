@@ -61,7 +61,7 @@ const ProductDetailPage = async ({ params }: Props) => {
   const { pkey } = params;
   const { id: productId } = await fetchProductKeyExchange(pkey);
   const dataProductDetail = await fetchProductDetail(productId);
-  console.log(dataProductDetail);
+  // console.log(dataProductDetail);
 
   return (
     <>
