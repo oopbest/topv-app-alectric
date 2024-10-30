@@ -1,3 +1,36 @@
+export interface ProductDetailShort {
+  id: number;
+  sku: string;
+  url_key: string | undefined;
+  image: string;
+  is_free: boolean;
+  item_id: number;
+}
+
+export interface ProductDetail {
+  status: number;
+  id: number;
+  sku: string;
+  name: string;
+  price: number;
+  special_price: number;
+  price_range: ProductPriceRange;
+  brand: ProductBrand[];
+  type_id: string;
+  media: ProductMedia[];
+  description: string;
+  customizes: ProductCustomize[];
+  warranty: ProductWarranty[];
+  shipping: ProductShipping[];
+  additional_information: ProductAdditionalInformation[];
+  stocks: ProductStock[];
+  review: ProductReview[];
+  coin: string;
+  promotion: string | null;
+  category: string;
+  category_id: number;
+}
+
 export interface ProductBrand {
   value: string;
   label: string;
@@ -12,6 +45,16 @@ export interface ProductMedia {
   media_path: string;
   video_content?: VideoMedia;
 }
+
+export interface ProductImage {
+  url: string;
+  alt: string;
+  type: string;
+  path: string;
+  video_title?: string;
+  video_url?: string;
+}
+
 
 export interface VideoMedia {
   video_title: string;

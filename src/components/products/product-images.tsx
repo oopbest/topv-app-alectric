@@ -1,127 +1,64 @@
 "use client";
 
-import Slider from "react-slick";
-import Image from "next/image";
-import { PrevArrow, NextArrow } from "./slick-arrow-custom";
 import { useState } from "react";
-import { PRODUCT_NOT_FOUND_IMG } from "@/const/product.const";
-import { ProductMedia } from "@/interfaces/dto/product-detail.dto";
-// import clsx from "clsx";
-
-// const images = [
-//   {
-//     id: 1,
-//     path: "/images/img-carousel-01.jpg",
-//   },
-//   {
-//     id: 2,
-//     path: "/images/img-carousel-02.jpg",
-//   },
-//   {
-//     id: 3,
-//     path: "/images/img-carousel-03.jpg",
-//   },
-//   {
-//     id: 4,
-//     path: "/images/img-carousel-04.jpg",
-//   },
-// ];
+import {
+  ProductDetail,
+  ProductImage,
+  ProductMedia,
+} from "@/interfaces/dto/product-detail.dto";
+import SliderSync from "./product-slider-sync";
 
 interface Props {
-  images: ProductMedia[];
+  dataProducts: ProductDetail;
 }
 
-const ProductImages = ({ images }: Props) => {
-  const defaultImage =
-    images && images.length > 0 ? images[0]?.media_path : PRODUCT_NOT_FOUND_IMG;
-  const [selectedImage, setSelectedImage] = useState<string | null>(
-    defaultImage
-  );
-  // const [activeSlide, setActiveSlide] = useState(0);
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number>();
+const ProductImages = ({ dataProducts }: Props) => {
+  const [selectedVarientSku] = useState<string>("");
 
-  // Slick settings
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Default
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />, // Custom Next Arrow
-    prevArrow: <PrevArrow />, // Custom Prev Arrow
-    //afterChange: (current: number) => setActiveSlide(current), // Update the active slide index
-    responsive: [
-      {
-        breakpoint: 1024, // For tablets and larger phones
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 640, // For small mobile screens
-        settings: {
-          arrows: false,
-          slidesToShow: 4,
-        },
-      },
-    ],
+  const setProductImages = (media: ProductMedia[]) => {
+    return media.map((media: ProductMedia) => {
+      let ytEmbededUrl = "";
+      if (
+        media.video_content !== undefined &&
+        media.video_content.video_url !== ""
+      ) {
+        const ytId = media.video_content.video_url.replace(
+          "https://youtu.be/",
+          ""
+        );
+        ytEmbededUrl = `https://www.youtube.com/embed/${ytId}`;
+      }
+      return {
+        url: media.media_path,
+        alt: media.media_path,
+        type: media.media_type,
+        path: media.media_path,
+        video_title: media.video_content?.video_title,
+        video_url: ytEmbededUrl,
+      };
+    });
   };
 
+  const isConfigurable = dataProducts.customizes.length > 0;
+  let productImages: ProductImage[] = [];
+  if (!isConfigurable || selectedVarientSku === "") {
+    productImages = setProductImages(dataProducts!.media);
+  } else {
+    const varient = dataProducts!.customizes[0].values.find(
+      (v) => v.sku == selectedVarientSku
+    );
+    let varientImages: ProductMedia[] | undefined = [];
+    varientImages = varient?.mediagallery.map((media) => {
+      return { ...media, media_path: media.file };
+    });
+    productImages = setProductImages(varientImages ? varientImages : []);
+  }
+
   return (
-    <div className="flex flex-col gap-3">
-      {selectedImage && images.length > 0 ? (
-        <Image
-          width={600}
-          height={456}
-          src={selectedImage}
-          alt="ttt"
-          className="max-w-full"
-        />
-      ) : (
-        <Image
-          width={600}
-          height={456}
-          src={defaultImage}
-          alt="Image not found"
-          className="max-w-full"
-        />
-      )}
-      {/* sliders */}
-      {images.length > 0 && (
-        <div className="max-w-xs mx-auto lg:px-8 md:max-w-md">
-          <Slider {...settings}>
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className={`px-2 ${
-                  selectedImageIndex === Number(image.position)
-                    ? "border-2 border-theme-color outline-none"
-                    : ""
-                }`}
-                // className={clsx(
-                //   "slick-slide",
-                //   "px-2", // Tailwind spacing for all slides
-                //   "transition-transform duration-300",
-                //   index === 0 ? "bla_bla" : "", // Default to first slide
-                //   index === activeSlide
-                //     ? "border border-green-500" // Custom style for active slide
-                //     : "opacity-75" // Custom style for non-active slides
-                // )}
-                onClick={() => {
-                  setSelectedImage(image.media_path);
-                  setSelectedImageIndex(Number(image.position));
-                }}
-              >
-                <Image
-                  src={image.media_path}
-                  alt={`Slide image ${image.position}`}
-                  width={600}
-                  height={400}
-                  className="max-w-full"
-                />
-              </div>
-            ))}
-          </Slider>
+    <div className="flex flex-col gap-2">
+      {dataProducts && (
+        <div className="w-full lg:max-w-lg mx-auto text-center">
+          <SliderSync productImages={productImages} />
         </div>
       )}
     </div>

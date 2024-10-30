@@ -71,7 +71,7 @@ const ProductDetailPage = async ({ params }: Props) => {
           <div className="flex flex-col gap-4 lg:flex-row">
             {/* Product Images */}
             <div className="flex-shrink-0">
-              <ProductImages images={dataProductDetail.media} />
+              <ProductImages dataProducts={dataProductDetail} />
             </div>
             {/* Product Short description */}
             <div className="flex flex-col gap-4">
