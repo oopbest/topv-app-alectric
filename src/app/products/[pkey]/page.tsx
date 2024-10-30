@@ -1,13 +1,14 @@
 import ProductImages from "@/components/products/product-images";
-import {
-  ProductDetail,
-  ProductKeyExchange,
-} from "@/interfaces/dto/product-detail.dto";
+// import {
+//   ProductDetail,
+//   ProductKeyExchange,
+// } from "@/interfaces/dto/product-detail.dto";
 import { formatThaiBaht } from "@/utils/format-currency.util";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ProductDetails from "@/components/products/product-details";
+import { fetchProductDetail, fetchProductKeyExchange } from "@/utils/api";
 
 type Props = {
   params: { pkey: string };
@@ -16,52 +17,17 @@ export const generateMetadata = async ({
   params,
 }: Props): Promise<Metadata> => {
   const { pkey } = params;
-  const title = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(pkey);
-    }, 100);
-  });
+  const { id: productId } = await fetchProductKeyExchange(pkey);
+  const dataProductDetail = await fetchProductDetail(productId);
   return {
-    title: `${title}`,
+    title: `${dataProductDetail.name}`,
   };
 };
 
-const fetchProductKeyExchange = async (
-  pkey: string
-): Promise<ProductKeyExchange> => {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/nextapi/type?urlKey=${pkey}`
-  );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch url key data");
-  }
-
-  const data = await response.json();
-  return data[0];
-};
-
-const fetchProductDetail = async (
-  productId: string
-): Promise<ProductDetail> => {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/nextapi/products/${productId}`
-  );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch url key data");
-  }
-
-  const data = await response.json();
-  return data[0];
-};
-
 const ProductDetailPage = async ({ params }: Props) => {
-  // console.log("Details about product ", params.pkey);
   const { pkey } = params;
   const { id: productId } = await fetchProductKeyExchange(pkey);
   const dataProductDetail = await fetchProductDetail(productId);
-  // console.log(dataProductDetail);
 
   return (
     <>
