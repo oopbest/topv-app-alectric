@@ -5,9 +5,9 @@ export default function ProductSkeletonFlex() {
         {Array.from({ length: 6 }).map((_, index) => (
           <div
             key={index}
-            className="bg-white flex items-center justify-center rounded-2xl overflow-hidden"
+            className="bg-white shadow-lg flex items-center justify-center rounded-2xl overflow-hidden"
           >
-            <div className="flex flex-col w-full p-4 rounded-lg shadow-md animate-pulse">
+            <div className="flex flex-col text-center gap-3 rounded-lg animate-pulse w-full p-4">
               {/* Image Placeholder */}
               <div className="bg-gray-300 h-40 lg:h-80 w-full rounded-lg"></div>
 

@@ -26,7 +26,7 @@ export default async function ProductsPage() {
           {error ? (
             <>{error}</>
           ) : (
-            <ProductsItem initialProducts={products} token={token} /> // Pass initial products to the component
+            <ProductsItem initialProducts={products} token={token} />
           )}
         </div>
       </section>
