@@ -36,6 +36,7 @@ const SliderSync = ({ productImages }: SliderSyncProps) => {
   const navSliderSettings = {
     // asNavFor: mainSliderRef.current,
     ref: navSliderRef,
+    arrows: false,
     slidesToShow: productImages.length >= 3 ? 3 : productImages.length, // Show up to 3 thumbnails or less
     focusOnSelect: true,
     centerMode: true,
