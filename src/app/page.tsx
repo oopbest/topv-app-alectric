@@ -15,7 +15,7 @@ export default function Home() {
           <Image
             width={750}
             height={500}
-            src="/images/company-image.jpg"
+            src="/images/company-image.png"
             alt=""
             className="max-w-full"
           />
@@ -136,7 +136,7 @@ export default function Home() {
             <Image
               width={750}
               height={367}
-              src="/images/brand-sce.jpg"
+              src="/images/brand-sce.png"
               alt="Sce"
               className="max-w-full"
             />
@@ -156,7 +156,7 @@ export default function Home() {
             <Image
               width={750}
               height={367}
-              src="/images/brand-cocogu.jpg"
+              src="/images/brand-cocogu.png"
               alt="Cocogu"
               className="max-w-full"
             />
