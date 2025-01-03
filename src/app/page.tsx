@@ -22,7 +22,7 @@ export default function Home() {
           <div className="mt-3 lg:w-1/2 lg:absolute lg:-bottom-10 lg:right-0 p-6 text-sm space-y-4 bg-white shadow-md">
             <p className="text-gray-500">เกี่ยวกับ</p>
             <h3 className="text-theme-secondary font-bold text-2xl">
-              บริษัท สวิทซ เฟลคซ จำกัด
+              บริษัท อเล็กทริค จำกัด
             </h3>
             <p>
               ก่อตั้งขึ้นเมื่อปี 2005

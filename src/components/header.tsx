@@ -105,16 +105,16 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <section className="flex px-4 py-2 lg:py-0 mx-auto container items-center justify-between">
+      <section className="flex px-4 py-2 lg:mx-auto container items-center justify-between">
         {/* Logo */}
         <div className="lg:order-first lg:basis-1/6 lg:p-0">
           <Link href="/" title="">
             <Image
-              width={80}
-              height={20}
+              width={100}
+              height={60}
               src="/images/logo.svg"
               alt="Alectric Website Logo"
-              className="w-24 h-auto md:w-32 lg:w-40"
+              className="sm: align-middle"
               priority={false}
             />
           </Link>
@@ -138,7 +138,7 @@ const Header = () => {
         </div>
 
         {/* Search */}
-        <div className="sm:basis-10/12 lg:w-auto lg:basis-1/5">
+        <div className="sm:basis-2/3 lg:w-auto lg:basis-1/5">
           <ProductSearch />
         </div>
       </section>

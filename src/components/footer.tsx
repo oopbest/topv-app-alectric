@@ -254,9 +254,9 @@ const Footer = () => {
         <Image
           src="/images/logo-white.svg"
           alt="Logo"
-          className="hidden sm:block w-1/6 absolute left-0 top-1/2 transform -translate-y-1/2"
-          width={40}
-          height={40}
+          className="hidden sm:block w-1/12 absolute left-0 top-1/2 transform -translate-y-1/2"
+          width={100}
+          height={60}
         />
         <p>&copy; Topvalue 2024</p>
         <Link href="#">เงื่อนไขการใช้งาน</Link>
