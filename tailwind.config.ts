@@ -16,7 +16,7 @@ const config: Config = {
         // foreground: "var(--foreground)",
         'theme-color': '#002E6D',
         'theme-container': '#f7f7f7',
-        'theme-secondary': '#870f18'
+        'theme-secondary': '#002E6D'
       },
       transitionProperty: {
         'max-height': 'max-height'

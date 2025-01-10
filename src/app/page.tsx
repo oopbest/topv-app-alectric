@@ -196,8 +196,8 @@ export default function Home() {
           </div>
           <div className="flex-1">
             <Image
-              width={800}
-              height={600}
+              width={570}
+              height={590}
               src="/images/product-recommend.png"
               alt="Fennix Ergonomic Desk โต๊ะปรับระดับอัตโนมัติด้วยระบบไฟฟ้า Size 120*60cm. รับประกันศูนย์ไทย 3 ปี"
               className="max-w-full"
@@ -294,16 +294,16 @@ export default function Home() {
           <div className="flex-1 flex-col p-10">
             <a
               href="#"
-              className="inline-block px-6 py-2 border leading-tight hover:border-emerald-500 transition duration-150 ease-in-out"
+              className="inline-block px-6 py-2 border leading-tight hover:border-theme-color hover:bg-theme-color hover:text-white transition duration-150 ease-in-out"
             >
               NAMIKO
             </a>
-            <h3 className="text-2xl py-4">Namiko x Linsy Modern ตู้วางทีวี</h3>
+            <h3 className="text-2xl py-4">Namiko Modern ตู้วางทีวี</h3>
             <p>
               ตู้วางทีวีสามารถทำความสะอาดได้อย่างง่ายชั้นวางแข็งแรงทนทานรับ
               น้ำหนักได้ดี
             </p>
-            <button className="flex items-center px-6 py-3 mt-3 bg-emerald-800 text-white rounded relative group transition">
+            <button className="flex items-center px-6 py-3 mt-3 bg-theme-color text-white rounded relative group transition">
               <span className="mr-2">ดูเพิ่มเติม</span>
               <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
                 <Image
@@ -320,7 +320,7 @@ export default function Home() {
               width={683}
               height={303}
               src="/images/product-namiko.png"
-              alt="Namiko x Linsy Modern ตู้วางทีวี"
+              alt="Namiko Modern ตู้วางทีวี"
               className="max-w-full"
             />
           </div>
@@ -340,7 +340,7 @@ export default function Home() {
           <div className="flex-1 flex-col text-center p-10">
             <a
               href="#"
-              className="inline-block px-6 py-2 border leading-tight hover:border-emerald-500 transition duration-150 ease-in-out"
+              className="inline-block px-6 py-2 border leading-tight hover:border-theme-color hover:bg-theme-color hover:text-white transition duration-150 ease-in-out"
             >
               SCE
             </a>
@@ -355,7 +355,7 @@ export default function Home() {
               ตั้งเวลาการทำอาหารได้ถึง 180 นาที
             </p>
             <div className="inline-block">
-              <button className="flex px-6 py-3 mt-3 bg-emerald-800 text-white rounded group transition">
+              <button className="flex px-6 py-3 mt-3 bg-theme-color text-white rounded group transition">
                 <span className="mr-2">ดูเพิ่มเติม</span>
                 <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
                   <Image
@@ -375,7 +375,7 @@ export default function Home() {
           <div className="flex-1 flex-col p-10">
             <a
               href="#"
-              className="inline-block px-6 py-2 border leading-tight hover:border-emerald-500 transition duration-150 ease-in-out"
+              className="inline-block px-6 py-2 border leading-tight hover:border-theme-color hover:bg-theme-color hover:text-white transition duration-150 ease-in-out"
             >
               COCOGU
             </a>
@@ -388,11 +388,11 @@ export default function Home() {
               (ก.ก.) : 0.38
             </p>
             <div className="inline-block">
-              <button className="flex px-6 py-3 mt-3 border border-emerald-800 text-emerald-800 rounded group transition">
+              <button className="flex px-6 py-3 mt-3 border bg-theme-color text-white rounded group transition">
                 <span className="mr-2">ดูเพิ่มเติม</span>
                 <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
                   <Image
-                    src="/images/btn-arrow-green.svg"
+                    src="/images/btn-arrow-white.svg"
                     alt="Arrow"
                     width={20}
                     height={20}
@@ -426,7 +426,7 @@ export default function Home() {
           <div className="flex-1 flex-col text-center p-10">
             <a
               href="#"
-              className="inline-block px-6 py-2 border leading-tight hover:border-emerald-500 transition duration-150 ease-in-out"
+              className="inline-block px-6 py-2 border leading-tight hover:border-theme-color hover:bg-theme-color hover:text-white transition duration-150 ease-in-out"
             >
               FENNIX
             </a>
@@ -440,11 +440,11 @@ export default function Home() {
               เพื่อลดความเมื่อยล้าที่ไหล่และหลังของคุณ
             </p>
             <div className="inline-block">
-              <button className="flex px-6 py-3 mt-3 border border-emerald-800 text-emerald-800 rounded group transition">
+              <button className="flex px-6 py-3 mt-3 border bg-theme-color text-white rounded group transition">
                 <span className="mr-2">ดูเพิ่มเติม</span>
                 <span className="transform transition-transform duration-300 ease-in-out translate-x-0 group-hover:translate-x-1">
                   <Image
-                    src="/images/btn-arrow-green.svg"
+                    src="/images/btn-arrow-white.svg"
                     alt="Arrow"
                     width={20}
                     height={20}
