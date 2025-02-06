@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-const ProductFennix = (props: Props) => {
+const ProductFennix = () => {
   return (
     <>
       {/* Product FENNIX */}
