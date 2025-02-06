@@ -16,3 +16,10 @@ export const STORE_TOPVALUE_ROUTE_PATH = "https://topvalue.com/brands/alectric";
 export const STORE_SHOPEE_ROUTE_PATH = "https://shopee.co.th/alectric_officialstore";
 export const STORE_LAZADA_ROUTE_PATH = "https://www.lazada.co.th/shop/alectric-officialstore/";
 export const STORE_JD_ROUTE_PATH = "https://www.jd.co.th/shop/pc/1004912.html";
+
+// Brand routes
+export const BRAND_ALTEC_ROUTE_PATH = "https://topv-app-altec.vercel.app";
+export const BRAND_NAMIKO_ROUTE_PATH = "https://topv-app-namiko-v2.vercel.app";
+export const BRAND_FENNIX_ROUTE_PATH = "https://topv-fennix.vercel.app";
+export const BRAND_SCE_ROUTE_PATH = "https://topv-app-sce.vercel.app";
+export const BRAND_COCOGU_ROUTE_PATH = "https://topv-cocogu.vercel.app";
