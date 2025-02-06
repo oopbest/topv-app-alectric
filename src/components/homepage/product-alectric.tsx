@@ -11,7 +11,7 @@ const ProductAlectric = () => {
             <Image
               width={500}
               height={500}
-              src="/images/alectric-product-1.jpg"
+              src="/images/alectric-product-1.png"
               alt="Alectric Pet Smart Cat Litter Box ห้องน้ำแมวอัจฉริยะ เชื่อมแอปฯได้
                 พร้อมระบบฆ่าเชื้อ รุ่น LB1 - รับประกัน 3 ปี"
               className="max-w-full self-center"
@@ -37,7 +37,7 @@ const ProductAlectric = () => {
             <Image
               width={500}
               height={500}
-              src="/images/alectric-product-2.jpg"
+              src="/images/alectric-product-2.png"
               alt="Alectric Smart Pet Feeder เครื่องให้อาหารอัจฉริยะ มีกล้องพร้อมไมค์ เชื่อมแอพได้ 5L รุ่น Smart PF1 - รับประกัน 3 ปี"
               className="max-w-full self-center"
             />
@@ -65,7 +65,7 @@ const ProductAlectric = () => {
             <Image
               width={500}
               height={500}
-              src="/images/alectric-product-3.jpg"
+              src="/images/alectric-product-3.png"
               alt="Alectric Pet Smart Water Fountain น้ำพุสัตว์เลี้ยงอัตโนมัติ 1.5L รุ่น FT1 - รับประกัน 3 ปี"
               className="max-w-full self-center"
             />

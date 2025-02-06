@@ -12,9 +12,7 @@ import React from "react";
 const HomeBrands = () => {
   return (
     <>
-      <h1 className="text-3xl pt-6 text-theme-secondary pb-6">
-        SWITCHFLEX Brands
-      </h1>
+      <h1 className="text-3xl pt-6 text-theme-secondary pb-6">Brands</h1>
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="flex-1 relative">
           <Image
