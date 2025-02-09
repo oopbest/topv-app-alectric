@@ -22,7 +22,10 @@ config.autoAddCss = false;
 // });
 
 export const metadata: Metadata = {
-  title: "Alectric",
+  title: {
+    default: "Alectric",
+    template: "%s | Alectric",
+  },
   description: "Alectric",
   icons: {
     icon: "/favicon.ico", // Use the path to your favicon

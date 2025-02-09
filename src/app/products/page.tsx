@@ -1,8 +1,14 @@
 import ProductsItem from "@/components/products/product-item";
 import { fetchAccessToken } from "@/utils/api";
+import { Metadata } from "next";
 import { cookies } from "next/headers";
 
 const PRODUCTS_API_URL = process.env.NEXT_PUBLIC_API_PRODUCTS_URL;
+
+export const metadata: Metadata = {
+  title: "Products",
+  description: "All Products",
+};
 
 export default async function ProductsPage() {
   const token = cookies().get("ACCESS_TOKEN")?.value;
